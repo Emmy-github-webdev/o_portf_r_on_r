@@ -5,18 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Rails version
-Rails 7.0.1
-* Ruby version
-ruby 3.1.0
-* System dependencies
+> Rails version
+- Rails 7.0.1
+> Ruby version
+- ruby 3.1.0
+> System dependencies
 
-* Configuration
+> Configuration
 
-* Create Rails Application
+> Create Rails Application
 - rails new myappname -T database=postgresql
 
-* Database creation
+> Database creation
 - Aftercreating the Rails application,
 - Setup the local host for the database
 - vim config/databse.yml
@@ -27,17 +27,16 @@ ruby 3.1.0
 - On the ternimal, type "rails db:create" Enter return key
 - Type "rails db:migrate" Enater return key
 
-* Run Apllication
+> Run Apllication
 Run the application and confirm the database setup is working without error
 > Run locally
 - rails server
- 
-* Database initialization
 
-* How to run the test suite
+> Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+> How to run the test suite
 
-* Deployment instructions
+> Services (job queues, cache servers, search engines, etc.)
 
-* ...
+> Deployment instructions
+
