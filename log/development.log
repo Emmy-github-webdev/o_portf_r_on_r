@@ -177,3 +177,86 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 55ms (Views: 47.1ms | ActiveRecord: 5.4ms | Allocations: 3249)
 
 
+Started GET "/blogs/1" for ::1 at 2022-02-11 09:09:19 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:63:in `set_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 27)
+  Rendered blogs/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 472)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 2501)
+Completed 200 OK in 151ms (Views: 25.3ms | ActiveRecord: 34.6ms | Allocations: 5735)
+
+
+Started DELETE "/blogs/1" for ::1 at 2022-02-11 09:09:21 +0100
+Processing by BlogsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:63:in `set_blog'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:52:in `destroy'
+  [1m[36mBlog Destroy (3.8ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/blogs_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 72ms (ActiveRecord: 38.3ms | Allocations: 2558)
+
+
+Started GET "/blogs" for ::1 at 2022-02-11 09:09:21 +0100
+Processing by BlogsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 2809)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 1.3ms | Allocations: 3094)
+
+
+Started GET "/blogs/new" for ::1 at 2022-02-11 09:40:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (Duration: 20.9ms | Allocations: 1656)
+  Rendered blogs/new.html.erb within layouts/application (Duration: 29.8ms | Allocations: 2092)
+  Rendered layout layouts/application.html.erb (Duration: 139.0ms | Allocations: 15866)
+Completed 200 OK in 219ms (Views: 150.1ms | ActiveRecord: 0.0ms | Allocations: 19051)
+
+
+Started GET "/" for ::1 at 2022-02-11 19:56:23 +0100
+Started GET "/" for ::1 at 2022-02-11 19:56:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (47.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 53.6ms | Allocations: 806)
+  Rendered /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 55.2ms | Allocations: 816)
+Completed 200 OK in 296ms (Views: 121.0ms | ActiveRecord: 0.0ms | Allocations: 7267)
+
+
+Completed 200 OK in 301ms (Views: 123.8ms | ActiveRecord: 0.0ms | Allocations: 7550)
+
+
+Started GET "/pages/home" for ::1 at 2022-02-11 20:06:12 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 994.4ms | Allocations: 34536)
+Completed 200 OK in 1005ms (Views: 1000.2ms | Allocations: 35880)
+
+
+Started GET "/pages/home" for ::1 at 2022-02-11 20:10:55 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3017)
+Completed 200 OK in 43ms (Views: 36.9ms | Allocations: 4178)
+
+
