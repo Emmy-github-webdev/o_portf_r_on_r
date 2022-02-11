@@ -32,6 +32,11 @@ Run the application and confirm the database setup is working without error
 > Run locally
 - rails server
 
+> Scaffold
+- A set of automatically generated files
+- rails g scaffold Blog title:string body:text
+- rails db:migrate
+
 > Database initialization
 
 > How to run the test suite
