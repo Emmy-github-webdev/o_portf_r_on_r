@@ -43,9 +43,13 @@ Run the application and confirm the database setup is working without error
 > Database initialization
 
 ## Rails Generators
-> Controller generator
+> Controller Generator
 - rails g controller pages home about contact
 > Note - Where Pages is the controller, while home, about and contact are the name of the pages (methods) in page controller
+
+> Model Generator
+- rails g model skill title:string percent_utilized:integer
+- rails db:migrate
 
 > How to run the test suite
 
