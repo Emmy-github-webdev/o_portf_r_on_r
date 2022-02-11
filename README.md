@@ -53,6 +53,9 @@ Run the application and confirm the database setup is working without error
 > Model Generator
 - rails g model skill title:string percent_utilized:integer
 - rails db:migrate
+> Resource Generator
+- rails g resource Portfolio title:string subtitle:string body:text main_image:text thumb_image:text
+- rails db:migrate
 
 ## Insert data to table - Ubuntu
 - Open the terminal
