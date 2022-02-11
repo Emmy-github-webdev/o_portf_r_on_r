@@ -4,7 +4,10 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 ## Design
+> Controllers
 - Pages: This consists of pages_controller. The controller has the home, about, contact methods
+> Model
+- skill(title:string, percent:integer)
 
 ## Things I cover
 
@@ -43,9 +46,18 @@ Run the application and confirm the database setup is working without error
 > Database initialization
 
 ## Rails Generators
-> Controller generator
+> Controller Generator
 - rails g controller pages home about contact
 > Note - Where Pages is the controller, while home, about and contact are the name of the pages (methods) in page controller
+
+> Model Generator
+- rails g model skill title:string percent_utilized:integer
+- rails db:migrate
+
+## Insert data to table - Ubuntu
+- Open the terminal
+- Type rails console
+- Type Skill.create!(title: "Ruby on Rails", percent_utilized: 65)
 
 > How to run the test suite
 

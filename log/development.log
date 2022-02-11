@@ -260,3 +260,48 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 43ms (Views: 36.9ms | Allocations: 4178)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSkills (20220211194853)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (441.6ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220211194853"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (33.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (2.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Ruby on Rails"], ["percent_utilized", 65], ["created_at", "2022-02-11 20:09:00.635534"], ["updated_at", "2022-02-11 20:09:00.635534"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.0ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "NodeJS"], ["percent_utilized", 75], ["created_at", "2022-02-11 20:11:16.260895"], ["updated_at", "2022-02-11 20:11:16.260895"]]
+  [1m[36mTRANSACTION (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "ReactJS"], ["percent_utilized", 50], ["created_at", "2022-02-11 20:11:56.267968"], ["updated_at", "2022-02-11 20:11:56.267968"]]
+  [1m[36mTRANSACTION (45.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Redux"], ["percent_utilized", 50], ["created_at", "2022-02-11 20:12:15.261168"], ["updated_at", "2022-02-11 20:12:15.261168"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "HTML"], ["percent_utilized", 80], ["created_at", "2022-02-11 20:12:49.850585"], ["updated_at", "2022-02-11 20:12:49.850585"]]
+  [1m[36mTRANSACTION (43.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "JavaScript"], ["percent_utilized", 60], ["created_at", "2022-02-11 20:13:15.881349"], ["updated_at", "2022-02-11 20:13:15.881349"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (1.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "CSS"], ["percent_utilized", 63], ["created_at", "2022-02-11 20:15:12.713130"], ["updated_at", "2022-02-11 20:15:12.713130"]]
+  [1m[36mTRANSACTION (68.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+Started GET "/pages/home" for ::1 at 2022-02-11 21:21:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mSkill Load (1.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  Rendered pages/home.html.erb within layouts/application (Duration: 72.6ms | Allocations: 8630)
+  Rendered layout layouts/application.html.erb (Duration: 139.2ms | Allocations: 22607)
+Completed 200 OK in 158ms (Views: 118.9ms | ActiveRecord: 27.3ms | Allocations: 24635)
+
+

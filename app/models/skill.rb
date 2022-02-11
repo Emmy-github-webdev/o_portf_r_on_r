@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-module PagesHelper
+class Skill < ApplicationRecord
 end
