@@ -51,6 +51,11 @@ Run the application and confirm the database setup is working without error
 - rails g model skill title:string percent_utilized:integer
 - rails db:migrate
 
+## Insert data to table - Ubuntu
+- Open the terminal
+- Type rails console
+- Type Skill.create!(title: "Ruby on Rails", percent_utilized: 65)
+
 > How to run the test suite
 
 > Services (job queues, cache servers, search engines, etc.)
