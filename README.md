@@ -3,7 +3,10 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## Design
+- Pages: This consists of pages_controller. The controller has the home, about, contact methods
+
+## Things I cover
 
 > Rails version
 - Rails 7.0.1
@@ -38,6 +41,11 @@ Run the application and confirm the database setup is working without error
 - rails db:migrate
 
 > Database initialization
+
+## Rails Generators
+> Controller generator
+- rails g controller pages home about contact
+> Note - Where Pages is the controller, while home, about and contact are the name of the pages (methods) in page controller
 
 > How to run the test suite
 
