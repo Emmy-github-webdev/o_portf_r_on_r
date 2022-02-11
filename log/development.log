@@ -293,3 +293,15 @@ Migrating to CreateSkills (20220211194853)
   [1m[36mSkill Create (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "CSS"], ["percent_utilized", 63], ["created_at", "2022-02-11 20:15:12.713130"], ["updated_at", "2022-02-11 20:15:12.713130"]]
   [1m[36mTRANSACTION (68.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+Started GET "/pages/home" for ::1 at 2022-02-11 21:21:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mSkill Load (1.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  Rendered pages/home.html.erb within layouts/application (Duration: 72.6ms | Allocations: 8630)
+  Rendered layout layouts/application.html.erb (Duration: 139.2ms | Allocations: 22607)
+Completed 200 OK in 158ms (Views: 118.9ms | ActiveRecord: 27.3ms | Allocations: 24635)
+
+

@@ -4,7 +4,10 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 ## Design
+> Controllers
 - Pages: This consists of pages_controller. The controller has the home, about, contact methods
+> Model
+- skill(title:string, percent:integer)
 
 ## Things I cover
 
