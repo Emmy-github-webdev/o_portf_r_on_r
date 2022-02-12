@@ -663,3 +663,460 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 1.4ms | Allocations: 5155)
 
 
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:13:04 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 14234)
+Completed 200 OK in 72ms (Views: 67.8ms | Allocations: 15515)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:21:43 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 208.2ms | Allocations: 13122)
+  Rendered layout layouts/application.html.erb (Duration: 230.5ms | Allocations: 15706)
+Completed 200 OK in 245ms (Views: 240.0ms | Allocations: 16854)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:22:50 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 75.7ms | Allocations: 5578)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 5672)
+Completed 500 Internal Server Error in 90ms (Allocations: 6830)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<ActionView::Base:0x0000000001a3b0>
+Did you mean?  portfolio_path
+               portfolio_url):
+    1: <h1>Create a new Portfolio Item</h1>
+    2: 
+    3: <%= form_with(model: portfolio_item) do |form| %>
+    4:   <div>
+    5:     <%= form.label :title, style: "display: block" %>
+    6:     <%= form.text_field :title %>
+  
+app/views/portfolios/new.html.erb:3
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:23:19 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 71.0ms | Allocations: 5068)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 5162)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 50.8ms | Allocations: 10850)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<ActionView::Base:0x0000000001ef28>
+Did you mean?  @portfolio_item
+               portfolio_path
+               portfolio_url):
+    1: <h1>Create a new Portfolio Item</h1>
+    2: 
+    3: <%= form_with(model: portfolio_item) do |form| %>
+    4:   <div>
+    5:     <%= form.label :title, style: "display: block" %>
+    6:     <%= form.text_field :title %>
+  
+app/views/portfolios/new.html.erb:3
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:24:33 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1460)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1554)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2705)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Create a new Portfolio Item</h1>
+    2: 
+    3: <%= form_with(@portfolio_item) do |form| %>
+    4:   <div>
+    5:     <%= form.label :title, style: "display: block" %>
+    6:     <%= form.text_field :title %>
+  
+app/views/portfolios/new.html.erb:3
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:24:52 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1929)
+  Rendered layout layouts/application.html.erb (Duration: 97.0ms | Allocations: 15713)
+Completed 200 OK in 111ms (Views: 106.5ms | ActiveRecord: 0.0ms | Allocations: 16902)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:28:28 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 14.6ms | Allocations: 1647)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1992)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 4532)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 5715)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:28:33 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 14.9ms | Allocations: 968)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1049)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 3086)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:28:38 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 8.9ms | Allocations: 974)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1055)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3092)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 3376)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-12 16:28:46 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PortfoliosController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:28:46 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 7.5ms | Allocations: 1111)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 3344)
+Completed 200 OK in 24ms (Views: 21.8ms | Allocations: 3669)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:29:53 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 27.6ms | Allocations: 1656)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 36.5ms | Allocations: 2000)
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 4540)
+Completed 200 OK in 84ms (Views: 78.3ms | Allocations: 5683)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-12 16:29:59 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PortfoliosController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:30:00 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 11.1ms | Allocations: 986)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 3104)
+Completed 200 OK in 43ms (Views: 41.0ms | Allocations: 3411)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-12 16:30:10 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PortfoliosController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:30:10 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 13.6ms | Allocations: 986)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 3104)
+Completed 200 OK in 36ms (Views: 34.0ms | Allocations: 3386)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:41:12 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 13.5ms | Allocations: 1241)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1333)
+  Rendered layout layouts/application.html.erb (Duration: 98.7ms | Allocations: 14799)
+Completed 200 OK in 262ms (Views: 112.6ms | ActiveRecord: 29.9ms | Allocations: 20504)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-12 16:41:37 +0100
+Processing by PortfoliosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Testing 1", "subtitle"=>"Test", "body"=>"Testing 1 test"}, "commit"=>"Create Portfolio"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+  [1m[36mPortfolio Create (2.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Testing 1"], ["subtitle", "Test"], ["body", "Testing 1 test"], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-02-12 15:41:37.860571"], ["updated_at", "2022-02-12 15:41:37.860571"]]
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 37ms (ActiveRecord: 6.2ms | Allocations: 4073)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 16:41:37 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2273)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 2361)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms | Allocations: 2814)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: <p><%= portfolio_item.title %></p>
+    5: <p><%= portfolio_item.subtitle %></p>
+    6: <p><%= portfolio_item.body %></p>
+    7: <p><%= image_tag portfolio_item.thumb_image %></p>
+    8: <% end %>
+  
+app/views/portfolios/index.html.erb:7
+app/views/portfolios/index.html.erb:3
+Started GET "/portfolios/new" for ::1 at 2022-02-12 16:42:15 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 13.6ms | Allocations: 1657)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2002)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 4557)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 5713)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-12 16:42:30 +0100
+Processing by PortfoliosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Testing 1", "subtitle"=>"Test", "body"=>"Testing 1 test"}, "commit"=>"Create Portfolio"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+  [1m[36mPortfolio Create (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Testing 1"], ["subtitle", "Test"], ["body", "Testing 1 test"], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-02-12 15:42:30.385529"], ["updated_at", "2022-02-12 15:42:30.385529"]]
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (29.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:16:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 49ms (ActiveRecord: 30.6ms | Allocations: 2529)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 16:42:30 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1094)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 3318)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 1.2ms | Allocations: 3716)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 16:44:16 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1290)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 4100)
+Completed 200 OK in 60ms (Views: 46.0ms | ActiveRecord: 2.7ms | Allocations: 5242)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 16:46:05 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (5.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2207)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 2301)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 5.2ms | Allocations: 3436)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: <p><%= portfolio_item.title %></p>
+    5: <p><%= portfolio_item.subtitle %></p>
+    6: <p><%= portfolio_item.body %></p>
+    7: <p><%= image_tag portfolio_item.thumb_image unless !portfolio_item.thumb_image.nil? %></p>
+    8: <% end %>
+  
+app/views/portfolios/index.html.erb:7
+app/views/portfolios/index.html.erb:3
+Started GET "/portfolios" for ::1 at 2022-02-12 16:46:38 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1290)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 4091)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 1.0ms | Allocations: 5255)
+
+
