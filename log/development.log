@@ -1120,3 +1120,66 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 1.0ms | Allocations: 5255)
 
 
+Started GET "/portfolios/3/edit" for ::1 at 2022-02-12 17:07:38 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 23.1ms | Allocations: 4735)
+  Rendered portfolios/edit.html.erb within layouts/application (Duration: 28.2ms | Allocations: 5080)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 7620)
+Completed 200 OK in 68ms (Views: 66.1ms | Allocations: 8652)
+
+
+Started GET "/portfolios/3/edit" for ::1 at 2022-02-12 17:10:39 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 9.9ms | Allocations: 1319)
+  Rendered portfolios/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 14850)
+Completed 200 OK in 168ms (Views: 62.6ms | ActiveRecord: 22.8ms | Allocations: 22791)
+
+
+Started GET "/portfolios/3/edit" for ::1 at 2022-02-12 17:19:06 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 11.7ms | Allocations: 1311)
+  Rendered portfolios/edit.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1403)
+  Rendered layout layouts/application.html.erb (Duration: 96.7ms | Allocations: 14757)
+Completed 200 OK in 272ms (Views: 104.8ms | ActiveRecord: 40.9ms | Allocations: 21684)
+
+
+Started PATCH "/portfolios/3" for ::1 at 2022-02-12 17:19:20 +0100
+Processing by PortfoliosController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Portfolio title 2", "subtitle"=>"My portfolio title 2 sub title updated", "body"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}, "commit"=>"Update Portfolio", "id"=>"3"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:33:in `block in update'
+  [1m[36mPortfolio Update (1.8ms)[0m  [1m[33mUPDATE "portfolios" SET "subtitle" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["subtitle", "My portfolio title 2 sub title updated"], ["updated_at", "2022-02-12 16:19:20.612832"], ["id", 3]]
+  ↳ app/controllers/portfolios_controller.rb:33:in `block in update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:33:in `block in update'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 39ms (ActiveRecord: 6.5ms | Allocations: 3269)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 17:19:20 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1218)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3438)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 1.4ms | Allocations: 3859)
+
+
