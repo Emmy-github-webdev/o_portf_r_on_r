@@ -1476,3 +1476,142 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 4.8ms | Allocations: 3630)
 
 
+Started GET "/portfolios" for ::1 at 2022-02-12 22:10:31 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 103.1ms | Allocations: 7000)
+  Rendered layout layouts/application.html.erb (Duration: 158.6ms | Allocations: 20767)
+Completed 200 OK in 172ms (Views: 165.3ms | ActiveRecord: 22.3ms | Allocations: 22724)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 22:11:02 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 44.3ms | Allocations: 2846)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | Allocations: 5383)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 1.1ms | Allocations: 6550)
+
+
+Started DELETE "/portfolios/6/edit" for ::1 at 2022-02-12 22:11:06 +0100
+  
+ActionController::RoutingError (No route matches [DELETE] "/portfolios/6/edit"):
+  
+Started GET "/portfolios" for ::1 at 2022-02-12 22:11:07 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 2235)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 4386)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 1.2ms | Allocations: 4708)
+
+
+Started DELETE "/portfolios/7/edit" for ::1 at 2022-02-12 22:11:24 +0100
+  
+ActionController::RoutingError (No route matches [DELETE] "/portfolios/7/edit"):
+  
+Started GET "/portfolios" for ::1 at 2022-02-12 22:11:24 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 2098)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 4135)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 1.1ms | Allocations: 4414)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 22:13:00 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2040)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 4808)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.2ms | Allocations: 5947)
+
+
+Started GET "/portfolios/6/edit" for ::1 at 2022-02-12 22:13:06 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 17.8ms | Allocations: 1609)
+  Rendered portfolios/edit.html.erb within layouts/application (Duration: 22.3ms | Allocations: 1923)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 3953)
+Completed 200 OK in 52ms (Views: 37.8ms | ActiveRecord: 2.1ms | Allocations: 5478)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 22:13:41 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (5.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 2845)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 5382)
+Completed 200 OK in 69ms (Views: 60.5ms | ActiveRecord: 5.5ms | Allocations: 6526)
+
+
+Started DELETE "/portfolios/6" for ::1 at 2022-02-12 22:13:46 +0100
+Processing by PortfoliosController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:48:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+  [1m[36mPortfolio Destroy (1.2ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 24ms (ActiveRecord: 6.1ms | Allocations: 2819)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 22:13:46 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 1973)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4010)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 1.0ms | Allocations: 4355)
+
+
+Started DELETE "/portfolios/7" for ::1 at 2022-02-12 22:14:00 +0100
+Processing by PortfoliosController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:48:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+  [1m[36mPortfolio Destroy (1.1ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:49:in `destroy'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 23ms (ActiveRecord: 5.2ms | Allocations: 2416)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-12 22:14:00 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1782)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 3819)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 1.0ms | Allocations: 4104)
+
+

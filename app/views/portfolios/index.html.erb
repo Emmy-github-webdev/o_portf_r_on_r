@@ -8,4 +8,5 @@
 <p><%= portfolio_item.body %></p>
 <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
 <%= link_to 'Edit',  edit_portfolio_path(portfolio_item.id) %>
+<%= button_to 'Destroy this portfolio', portfolio_path(portfolio_item.id), method: :delete, data: {confrim: 'Are you sure?'} %>
 <% end %>
