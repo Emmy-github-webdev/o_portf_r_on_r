@@ -1615,3 +1615,53 @@ Processing by PortfoliosController#index as TURBO_STREAM
 Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 1.0ms | Allocations: 4104)
 
 
+Started GET "/" for ::1 at 2022-02-13 14:59:15 +0100
+Started GET "/" for ::1 at 2022-02-13 14:59:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (38.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (40.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (41.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  [1m[36mSkill Load (45.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 359.7ms | Allocations: 17870)
+  Rendered pages/home.html.erb within layouts/application (Duration: 359.9ms | Allocations: 18155)
+  Rendered layout layouts/application.html.erb (Duration: 2087.8ms | Allocations: 81271)
+Completed 200 OK in 2444ms (Views: 1918.9ms | ActiveRecord: 223.2ms | Allocations: 89372)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 2121.9ms | Allocations: 82671)
+Completed 200 OK in 2478ms (Views: 2042.8ms | ActiveRecord: 132.9ms | Allocations: 90526)
+
+
+Started GET "/about" for ::1 at 2022-02-13 14:59:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+Started GET "/about" for ::1 at 2022-02-13 15:02:05 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 37.7ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 114.1ms | Allocations: 13899)
+Completed 200 OK in 122ms (Views: 119.6ms | ActiveRecord: 0.0ms | Allocations: 14944)
+
+
+Started GET "/contact" for ::1 at 2022-02-13 15:02:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 32.8ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 294.3ms | Allocations: 34872)
+Completed 200 OK in 339ms (Views: 315.8ms | ActiveRecord: 0.0ms | Allocations: 40904)
+
+
