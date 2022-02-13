@@ -1698,3 +1698,107 @@ Processing by PortfoliosController#new as HTML
 Completed 200 OK in 236ms (Views: 232.2ms | ActiveRecord: 0.0ms | Allocations: 14435)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFriendlyIdSlugs (20220213142328)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (416.3ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp(6))[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220213142328"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (36.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToBlogs (20220213142900)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "blogs" ADD "slug" character varying[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220213142900"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-slug-test-title"], ["LIMIT", 1]]
+  [1m[36mBlog Create (21.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My slug test title"], ["body", "The body of my slug test title"], ["created_at", "2022-02-13 14:35:33.913976"], ["updated_at", "2022-02-13 14:35:33.913976"], ["slug", "my-slug-test-title"]]
+  [1m[36mTRANSACTION (45.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/portfolios" for ::1 at 2022-02-13 15:39:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 56.2ms | Allocations: 3827)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 17290)
+Completed 200 OK in 136ms (Views: 127.3ms | ActiveRecord: 2.0ms | Allocations: 18932)
+
+
+Started GET "/blogs" for ::1 at 2022-02-13 15:39:50 +0100
+Processing by BlogsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1485)
+
+
+  
+NameError (uninitialized constant Blog::FriendlyId
+
+  extend FriendlyId
+         ^^^^^^^^^^):
+  
+app/models/blog.rb:4:in `<class:Blog>'
+app/models/blog.rb:3:in `<main>'
+app/controllers/blogs_controller.rb:8:in `index'
+Started GET "/blogs" for ::1 at 2022-02-13 15:41:13 +0100
+Processing by BlogsController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1652)
+
+
+  
+NameError (uninitialized constant Blog::FriendlyId
+
+  extend FriendlyId
+         ^^^^^^^^^^):
+  
+app/models/blog.rb:4:in `<class:Blog>'
+app/models/blog.rb:3:in `<main>'
+app/controllers/blogs_controller.rb:8:in `index'
+Started GET "/blogs" for ::1 at 2022-02-13 15:41:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 21.7ms | Allocations: 374)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 27)
+  Rendered blogs/_blog.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered blogs/index.html.erb within layouts/application (Duration: 182.8ms | Allocations: 11351)
+  Rendered layout layouts/application.html.erb (Duration: 396.5ms | Allocations: 44860)
+Completed 200 OK in 456ms (Views: 389.1ms | ActiveRecord: 19.1ms | Allocations: 53157)
+
+
+Started GET "/blogs/my-slug-test-title" for ::1 at 2022-02-13 15:42:20 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-slug-test-title"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-slug-test-title"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64:in `set_blog'
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 33)
+  Rendered blogs/show.html.erb within layouts/application (Duration: 32.1ms | Allocations: 967)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 3102)
+Completed 200 OK in 112ms (Views: 53.8ms | ActiveRecord: 2.3ms | Allocations: 12484)
+
+
