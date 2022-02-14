@@ -1,12 +1,15 @@
 <div id="<%= dom_id blog %>">
   <p>
     <strong>Title:</strong>
-    <%= blog.title %>
+    <%= link_to blog.title, blog_path(blog)%>
   </p>
 
   <p>
     <strong>Body:</strong>
     <%= blog.body %>
+  </p>
+  <p>
+    <%= link_to blog.status, toggle_status_blog_path(blog) %>
   </p>
 
 </div>
