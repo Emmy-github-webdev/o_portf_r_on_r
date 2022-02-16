@@ -1,0 +1,10 @@
+<h1>React JS<h1>
+
+<% @portfolio_react.each do |portfolio_item|%>
+<p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p>
+<p><%= portfolio_item.subtitle %></p>
+<p><%= portfolio_item.body %></p>
+<p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+<%= link_to 'Edit',  edit_portfolio_path(portfolio_item.id) %>
+<%= button_to 'Destroy this portfolio', portfolio_path(portfolio_item.id), method: :delete, data: {confrim: 'Are you sure?'} %>
+<% end %>
