@@ -5035,3 +5035,48 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 1.4ms | Allocations: 5812)
 
 
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBadgeToSkills (20220216191141)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (112.4ms)[0m  [1m[35mALTER TABLE "skills" ADD "badge" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220216191141"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (32.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7779603514063450860)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/portfolios/new" for ::1 at 2022-02-16 21:24:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 149.8ms | Allocations: 3904)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 183.5ms | Allocations: 4296)
+  Rendered layout layouts/application.html.erb (Duration: 251.1ms | Allocations: 17668)
+Completed 200 OK in 283ms (Views: 256.1ms | ActiveRecord: 0.0ms | Allocations: 21634)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-16 21:25:17 +0100
+Processing by PortfoliosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Test concern", "subtitle"=>"Use of concern", "body"=>"Testing concern "}, "commit"=>"Create Portfolio"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:19:in `block in create'
+  [1m[36mPortfolio Create (47.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Test concern"], ["subtitle", "Use of concern"], ["body", "Testing concern "], ["main_image", "http://placehold.it/600X400"], ["thumb_image", "http://placehold.it/350X200"], ["created_at", "2022-02-16 20:25:17.981717"], ["updated_at", "2022-02-16 20:25:17.981717"]]
+  ↳ app/controllers/portfolios_controller.rb:19:in `block in create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:19:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 76ms (ActiveRecord: 51.4ms | Allocations: 3859)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-16 21:25:18 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2948)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 5081)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 1.5ms | Allocations: 5501)
+
+
