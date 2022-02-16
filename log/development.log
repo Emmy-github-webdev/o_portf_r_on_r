@@ -5012,3 +5012,26 @@ Processing by PortfoliosController#reactjs as HTML
 Completed 200 OK in 345ms (Views: 294.1ms | ActiveRecord: 14.7ms | Allocations: 54078)
 
 
+Started GET "/portfolio-react" for ::1 at 2022-02-16 19:59:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#reactjs as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/reactjs.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1[0m  [["subtitle", "ReactJS"]]
+  ↳ app/views/portfolios/reactjs.html.erb:3
+  Rendered portfolios/reactjs.html.erb within layouts/application (Duration: 75.5ms | Allocations: 12448)
+  Rendered layout layouts/application.html.erb (Duration: 279.7ms | Allocations: 46311)
+Completed 200 OK in 328ms (Views: 276.6ms | ActiveRecord: 15.8ms | Allocations: 54329)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-16 19:59:53 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 3240)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 5379)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 1.4ms | Allocations: 5812)
+
+
