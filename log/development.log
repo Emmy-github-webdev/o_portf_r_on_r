@@ -5323,3 +5323,104 @@ FOREIGN KEY ("portfolio_id")
   [1m[36mTRANSACTION (18.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mTechnology Count (48.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+Started GET "/" for ::1 at 2022-02-19 22:56:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 144.1ms | Allocations: 16340)
+  Rendered layout layouts/application.html.erb (Duration: 696.0ms | Allocations: 50605)
+Completed 200 OK in 885ms (Views: 698.1ms | ActiveRecord: 34.1ms | Allocations: 62316)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-19 22:56:33 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 72.0ms | Allocations: 8407)
+  Rendered layout layouts/application.html.erb (Duration: 96.4ms | Allocations: 10629)
+Completed 200 OK in 126ms (Views: 92.1ms | ActiveRecord: 13.2ms | Allocations: 14205)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-19 23:12:32 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 157.2ms | Allocations: 7660)
+  Rendered layout layouts/application.html.erb (Duration: 246.5ms | Allocations: 21342)
+Completed 200 OK in 273ms (Views: 252.1ms | ActiveRecord: 27.8ms | Allocations: 25069)
+
+
+Started GET "/portfolios/new" for ::1 at 2022-02-19 23:12:58 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 99.6ms | Allocations: 4742)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 102.9ms | Allocations: 5118)
+  Rendered layout layouts/application.html.erb (Duration: 119.0ms | Allocations: 7273)
+Completed 200 OK in 241ms (Views: 123.9ms | ActiveRecord: 35.5ms | Allocations: 17609)
+
+
+Started POST "/portfolios" for ::1 at 2022-02-19 23:14:01 +0100
+Processing by PortfoliosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Test nested technologies", "subtitle"=>"Test nested technologies", "body"=>"Test nested technologies description", "technologies_attributes"=>{"0"=>{"name"=>"NodeJs"}, "1"=>{"name"=>"Redux"}, "2"=>{"name"=>"ReactJS"}}}, "commit"=>"Create Portfolio"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mPortfolio Create (1.8ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Test nested technologies"], ["subtitle", "Test nested technologies"], ["body", "Test nested technologies description"], ["main_image", "http://placehold.it/600X400"], ["thumb_image", "http://placehold.it/350X200"], ["created_at", "2022-02-19 22:14:01.436055"], ["updated_at", "2022-02-19 22:14:01.436055"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (2.9ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NodeJs"], ["portfolio_id", 11], ["created_at", "2022-02-19 22:14:01.451841"], ["updated_at", "2022-02-19 22:14:01.451841"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (1.2ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Redux"], ["portfolio_id", 11], ["created_at", "2022-02-19 22:14:01.464094"], ["updated_at", "2022-02-19 22:14:01.464094"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (1.3ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ReactJS"], ["portfolio_id", 11], ["created_at", "2022-02-19 22:14:01.471085"], ["updated_at", "2022-02-19 22:14:01.471085"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 67ms (ActiveRecord: 10.8ms | Allocations: 7820)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-19 23:14:01 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 3005)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 5138)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 1.9ms | Allocations: 5510)
+
+
+Started GET "/portfolios" for ::1 at 2022-02-19 23:18:49 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 43.4ms | Allocations: 3681)
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 6217)
+Completed 200 OK in 96ms (Views: 91.7ms | ActiveRecord: 1.9ms | Allocations: 7382)
+
+
+Started GET "/portfolio/11" for ::1 at 2022-02-19 23:19:13 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2180)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 4559)
+Completed 200 OK in 97ms (Views: 41.4ms | ActiveRecord: 3.6ms | Allocations: 12241)
+
+
