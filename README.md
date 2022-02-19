@@ -66,5 +66,8 @@ Run the application and confirm the database setup is working without error
 
 > Services (job queues, cache servers, search engines, etc.)
 
+> [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on)
+- Add tags to post 
+
 > Deployment instructions
 
