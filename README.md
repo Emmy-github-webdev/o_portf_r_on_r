@@ -67,7 +67,12 @@ Run the application and confirm the database setup is working without error
 > Services (job queues, cache servers, search engines, etc.)
 
 > [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on)
-- Add tags to post 
+- Add tags to post
+> Authentication
+- [Ruby Gems](https://rubygems.org/)
+- [Devise](https://rubygems.org/search?query=devise)
+- Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
+- Run bundle install
 
 > Deployment instructions
 
