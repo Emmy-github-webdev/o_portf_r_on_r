@@ -6300,3 +6300,556 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 4.5ms | Allocations: 5241)
 
 
+Started GET "/" for ::1 at 2022-02-21 08:50:12 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 118.7ms | Allocations: 5233)
+  Rendered layout layouts/application.html.erb (Duration: 137.7ms | Allocations: 8242)
+Completed 200 OK in 150ms (Views: 148.4ms | ActiveRecord: 26.4ms | Allocations: 9433)
+
+
+Started GET "/" for ::1 at 2022-02-21 09:11:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (93.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (60.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+Started GET "/" for ::1 at 2022-02-21 09:11:47 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (4.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (9.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  [1m[36mSkill Load (44.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 190.9ms | Allocations: 18184)
+  Rendered pages/home.html.erb within layouts/application (Duration: 445.4ms | Allocations: 23939)
+  Rendered layout layouts/application.html.erb (Duration: 1026.4ms | Allocations: 71855)
+Completed 200 OK in 1031ms (Views: 953.6ms | ActiveRecord: 75.5ms | Allocations: 72368)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1328.0ms | Allocations: 81718)
+Completed 200 OK in 1916ms (Views: 1125.1ms | ActiveRecord: 251.0ms | Allocations: 93074)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:11:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2022-02-21 09:16:19 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 71.6ms | Allocations: 6221)
+  Rendered layout layouts/application.html.erb (Duration: 121.0ms | Allocations: 19971)
+Completed 200 OK in 144ms (Views: 98.2ms | ActiveRecord: 27.2ms | Allocations: 24188)
+
+
+Started GET "/" for ::1 at 2022-02-21 09:16:26 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (3.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 30.4ms | Allocations: 2430)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 4664)
+Completed 200 OK in 53ms (Views: 45.8ms | ActiveRecord: 5.0ms | Allocations: 4980)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:16:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/register" for ::1 at 2022-02-21 09:17:32 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (55.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 645ms (ActiveRecord: 65.7ms | Allocations: 12013)
+
+
+Started GET "/" for ::1 at 2022-02-21 09:17:33 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (6.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 82.9ms | Allocations: 6157)
+  Rendered layout layouts/application.html.erb (Duration: 149.0ms | Allocations: 19997)
+Completed 200 OK in 168ms (Views: 126.3ms | ActiveRecord: 26.2ms | Allocations: 24218)
+
+
+Started GET "/login" for ::1 at 2022-02-21 09:17:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms | Allocations: 1973)
+
+
+Started GET "/" for ::1 at 2022-02-21 09:17:44 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 21.8ms | Allocations: 2462)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 4846)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 2.5ms | Allocations: 5189)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:17:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2022-02-21 09:21:20 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 37.3ms | Allocations: 2817)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 5787)
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 2.9ms | Allocations: 6957)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:21:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2022-02-21 09:25:11 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 28.5ms | Allocations: 2827)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 5824)
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 2.2ms | Allocations: 7035)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:25:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2022-02-21 09:43:09 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 137.6ms | Allocations: 5296)
+  Rendered layout layouts/application.html.erb (Duration: 143.9ms | Allocations: 6704)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 27.6ms | Allocations: 7889)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <%= if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <%= if current_user %>
+17:        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:      </body>
+24:    </html>
+  
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-02-21 09:44:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 101.0ms | Allocations: 16348)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 18241)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 26.8ms | Allocations: 29628)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <%= if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <%= if current_user %>
+17:        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:      </body>
+24:    </html>
+  
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:18: syntax error, unexpected `else', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:27: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-02-21 09:46:13 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.7ms | Allocations: 2828)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 393.2ms | Allocations: 55064)
+Completed 200 OK in 402ms (Views: 387.8ms | ActiveRecord: 11.9ms | Allocations: 56329)
+
+
+Started GET "/logout" for ::1 at 2022-02-21 09:46:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:50:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 92.5ms | Allocations: 16342)
+  Rendered layout layouts/application.html.erb (Duration: 303.8ms | Allocations: 51221)
+Completed 200 OK in 357ms (Views: 289.9ms | ActiveRecord: 25.1ms | Allocations: 62653)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-21 09:50:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 29.1ms | Allocations: 1375)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 260.3ms | Allocations: 6693)
+  Rendered layout layouts/application.html.erb (Duration: 270.5ms | Allocations: 9040)
+Completed 200 OK in 413ms (Views: 276.1ms | ActiveRecord: 8.8ms | Allocations: 18350)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-21 09:50:44 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 949ms (ActiveRecord: 2.4ms | Allocations: 6191)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:50:45 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 19.9ms | Allocations: 2547)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 5843)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 2.9ms | Allocations: 6244)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-02-21 09:50:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:56:45 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 144.4ms | Allocations: 5293)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 183.1ms | Allocations: 9346)
+Completed 200 OK in 192ms (Views: 189.6ms | ActiveRecord: 28.3ms | Allocations: 10538)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:56:50 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 31.8ms | Allocations: 2430)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 5557)
+Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 3.9ms | Allocations: 5874)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 09:56:53 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 95ms (ActiveRecord: 0.9ms | Allocations: 8939)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:56:53 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 22.3ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 5052)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 2.7ms | Allocations: 5445)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-21 09:57:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.2ms | Allocations: 924)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2583)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 5476)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 7076)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-21 09:58:04 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 763ms (ActiveRecord: 2.1ms | Allocations: 2776)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 09:58:05 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2816)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 6220)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 3.5ms | Allocations: 7247)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-02-21 09:58:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:00:23 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 30.0ms | Allocations: 2822)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 6888)
+Completed 200 OK in 69ms (Views: 63.4ms | ActiveRecord: 3.7ms | Allocations: 8084)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:00:27 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (5.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.7ms | Allocations: 2430)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 5565)
+Completed 200 OK in 74ms (Views: 65.5ms | ActiveRecord: 7.1ms | Allocations: 5880)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 10:00:31 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms | Allocations: 1858)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:00:31 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2432)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 4801)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.8ms | Allocations: 5145)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:01:40 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 14.4ms | Allocations: 385)
+  Rendered devise/shared/_links.html.erb (Duration: 9.5ms | Allocations: 1071)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 97.7ms | Allocations: 3530)
+  Rendered layout layouts/application.html.erb (Duration: 112.3ms | Allocations: 5887)
+Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 7516)
+
+
