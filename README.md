@@ -23,7 +23,7 @@ application up and running.
 - rails new myappname -T database=postgresql
 
 > Database creation
-- Aftercreating the Rails application,
+- After creating the Rails application,
 - Setup the local host for the database
 - vim config/databse.yml
 - Press i to insert data

@@ -7044,3 +7044,157 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 80ms (Views: 40.1ms | ActiveRecord: 3.3ms | Allocations: 5142)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:17:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (47.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/emmy/Desktop/the_odin_project/o_portf_r_on_r/app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:21:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/emmy/Desktop/the_odin_project/o_portf_r_on_r/app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/concerns/devise_whitelist.rb:13: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:23:58 +0100
+  
+NameError (uninitialized constant DeviseWhitelist
+
+model DeviseWhitelist
+      ^^^^^^^^^^^^^^^
+Did you mean?  DeviseHelper):
+  
+app/controllers/concerns/devise_whitelist.rb:1:in `<main>'
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:25:28 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (93.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (48.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 567.8ms | Allocations: 16056)
+  Rendered layout layouts/application.html.erb (Duration: 1238.7ms | Allocations: 50817)
+Completed 200 OK in 1639ms (Views: 975.7ms | ActiveRecord: 269.8ms | Allocations: 62208)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-21 17:25:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 20.6ms | Allocations: 418)
+  Rendered devise/shared/_links.html.erb (Duration: 17.1ms | Allocations: 1150)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 442.5ms | Allocations: 7206)
+  Rendered layout layouts/application.html.erb (Duration: 463.2ms | Allocations: 9553)
+Completed 200 OK in 582ms (Views: 470.5ms | ActiveRecord: 18.2ms | Allocations: 18838)
+
+
+Started POST "/" for 127.0.0.1 at 2022-02-21 17:26:45 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Godswill", "email"=>"test5@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (29.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test5@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (39.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test5@example.com"], ["encrypted_password", "[FILTERED]"], ["name", "Godswill"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-02-21 16:26:46.968981"], ["updated_at", "2022-02-21 16:26:46.968981"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1083ms (ActiveRecord: 83.0ms | Allocations: 10164)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:26:47 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.1ms | Allocations: 2456)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 6129)
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 5.1ms | Allocations: 6501)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-21 17:27:03 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 22)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 48.4ms | Allocations: 2463)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 4619)
+Completed 200 OK in 119ms (Views: 84.1ms | ActiveRecord: 6.2ms | Allocations: 6358)
+
+
+Started PUT "/" for 127.0.0.1 at 2022-02-21 17:27:32 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Godswill Emmanuel", "email"=>"test5@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "Godswill Emmanuel"], ["updated_at", "2022-02-21 16:27:33.518818"], ["id", 7]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 892ms (ActiveRecord: 7.7ms | Allocations: 7650)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:27:33 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.9ms | Allocations: 2430)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 5597)
+Completed 200 OK in 52ms (Views: 45.1ms | ActiveRecord: 4.3ms | Allocations: 5897)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-21 17:27:42 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 21)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 20.1ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 3525)
+Completed 200 OK in 87ms (Views: 53.5ms | ActiveRecord: 5.8ms | Allocations: 5181)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 17:27:49 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 103ms (ActiveRecord: 1.5ms | Allocations: 3157)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 17:27:49 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 22.1ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 5079)
+Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 2.3ms | Allocations: 5429)
+
+
