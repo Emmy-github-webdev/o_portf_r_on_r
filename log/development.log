@@ -7198,3 +7198,72 @@ Processing by PagesController#home as TURBO_STREAM
 Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 2.3ms | Allocations: 5429)
 
 
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:21:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (47.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (71.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (24.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 295.3ms | Allocations: 16956)
+  Rendered layout layouts/application.html.erb (Duration: 890.0ms | Allocations: 51478)
+Completed 200 OK in 1555ms (Views: 799.2ms | ActiveRecord: 138.9ms | Allocations: 64849)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-21 18:21:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 28.4ms | Allocations: 1375)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 410.8ms | Allocations: 6691)
+  Rendered layout layouts/application.html.erb (Duration: 421.2ms | Allocations: 9038)
+Completed 200 OK in 519ms (Views: 427.6ms | ActiveRecord: 8.0ms | Allocations: 18399)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-21 18:21:43 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test5@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test5@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1131ms (ActiveRecord: 2.6ms | Allocations: 6225)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:21:44 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (3.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 43.4ms | Allocations: 3693)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 6026)
+Completed 200 OK in 66ms (Views: 55.4ms | ActiveRecord: 9.2ms | Allocations: 6428)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 18:32:58 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 228ms (ActiveRecord: 21.5ms | Allocations: 11303)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:32:58 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 31.3ms | Allocations: 2922)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 5173)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 2.5ms | Allocations: 5525)
+
+
