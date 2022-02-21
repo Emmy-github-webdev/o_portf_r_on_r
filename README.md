@@ -23,7 +23,7 @@ application up and running.
 - rails new myappname -T database=postgresql
 
 > Database creation
-- Aftercreating the Rails application,
+- After creating the Rails application,
 - Setup the local host for the database
 - vim config/databse.yml
 - Press i to insert data
@@ -73,6 +73,16 @@ Run the application and confirm the database setup is working without error
 - [Devise](https://rubygems.org/search?query=devise)
 - Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
 - Run bundle install
+- [Install device generator](https://github.com/heartcombo/devise) $ rails generate devise:install
+- Complete the instructions of the installation for the device configuration
+- Possible error message when you try sign up - NoMethodError (undefined method 'user_url' for #<Devise::RegistrationsController:0x0000000000d638>)
+- Solution - Add :turbo_stream as a navigational format. This line goes in config/initializers/devise.rb.  - config.navigational_formats = ['*/*', :html, :turbo_stream]
+- Possible error for logout - No route matches [GET] "/logout"
+- Solution - If you want to use :delete method for security reasons and not be dependent on jquery-ujs you can use button_to instead of link_to, like:
+button_to "Log out", destroy_user_session_path, method: :delete
+- Possible error when add custom attributes - undefined method `before_filter' for AuthorsController:Class
+- Solution - Try using before_action :zero_authors_or_authenticated, only: [:new, :create] Instead of before_filter :zero_authors_or_authenticated, only: [:new, :create]
+- Note - before_filter has been deprecated in Rails 5.0 and removed in 5.1.
 
 > Deployment instructions
 
