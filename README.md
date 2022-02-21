@@ -73,6 +73,10 @@ Run the application and confirm the database setup is working without error
 - [Devise](https://rubygems.org/search?query=devise)
 - Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
 - Run bundle install
+- [Install device generator](https://github.com/heartcombo/devise) $ rails generate devise:install
+- Complete the instructions of the installation for the device configuration
+- Possible error message when you try sign up - NoMethodError (undefined method 'user_url' for #<Devise::RegistrationsController:0x0000000000d638>)
+- Solution - Add :turbo_stream as a navigational format. This line goes in config/initializers/devise.rb.  - config.navigational_formats = ['*/*', :html, :turbo_stream]
 
 > Deployment instructions
 
