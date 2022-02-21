@@ -6853,3 +6853,194 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 7516)
 
 
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:15:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 4.6ms | Allocations: 878)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.0ms | Allocations: 3400)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 6304)
+Completed 200 OK in 46ms (Views: 43.1ms | Allocations: 7900)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:29:13 +0100
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+  ^^^^^^^^^^^^^
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:29:37 +0100
+  
+SyntaxError (/home/emmy/Desktop/the_odin_project/o_portf_r_on_r/app/controllers/application_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/application_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:30:54 +0100
+  
+SyntaxError (/home/emmy/Desktop/the_odin_project/o_portf_r_on_r/app/controllers/application_controller.rb:4: syntax error, unexpected `end', expecting `then' or ';' or '\n'
+...ers, if :devise_controller? end
+...                            ^~~
+):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected `end', expecting `then' or ';' or '\n'
+app/controllers/application_controller.rb:4: syntax error, unexpected `end', expecting `then' or ';' or '\n'
+app/controllers/application_controller.rb:4: syntax error, unexpected `end', expecting `then' or ';' or '\n'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:31:51 +0100
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+  ^^^^^^^^^^^^^
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:33:34 +0100
+  
+NoMethodError (undefined method `with' for ApplicationController:Class
+
+  protect_from_forgery with :exception
+                       ^^^^):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:33:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `with' for ApplicationController:Class
+
+  protect_from_forgery with :exception
+                       ^^^^):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:34:24 +0100
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+  ^^^^^^^^^^^^^
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:5:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:38:04 +0100
+  
+NoMethodError (undefined method `before_action?' for ApplicationController:Class
+
+  before_action? :configure_permitted_parameters, if: :devise_controller?
+  ^^^^^^^^^^^^^^
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:5:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/pages_controller.rb:3:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:38:16 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 129.4ms | Allocations: 16084)
+  Rendered layout layouts/application.html.erb (Duration: 358.7ms | Allocations: 50367)
+Completed 200 OK in 416ms (Views: 336.3ms | ActiveRecord: 31.5ms | Allocations: 61754)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-21 10:38:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.3ms | Allocations: 417)
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 1148)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.7ms | Allocations: 7200)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 9546)
+Completed 200 OK in 117ms (Views: 56.1ms | ActiveRecord: 7.4ms | Allocations: 18746)
+
+
+Started POST "/" for 127.0.0.1 at 2022-02-21 10:38:56 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Emmanuel Ogah", "email"=>"test4@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test4@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (46.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test4@example.com"], ["encrypted_password", "[FILTERED]"], ["name", "Emmanuel Ogah"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-02-21 09:38:57.235182"], ["updated_at", "2022-02-21 09:38:57.235182"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 837ms (ActiveRecord: 55.6ms | Allocations: 10136)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:38:57 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2456)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 6102)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 3.2ms | Allocations: 6474)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-21 10:39:08 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2462)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 4618)
+Completed 200 OK in 61ms (Views: 35.4ms | ActiveRecord: 2.7ms | Allocations: 6342)
+
+
+Started PUT "/" for 127.0.0.1 at 2022-02-21 10:43:38 +0100
+Processing by Devise::RegistrationsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Emmanuel Ogah O.", "email"=>"test4@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "Emmanuel Ogah O."], ["updated_at", "2022-02-21 09:43:38.843090"], ["id", 6]]
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 835ms (ActiveRecord: 28.6ms | Allocations: 7612)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 10:43:38 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.2ms | Allocations: 2430)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 90.3ms | Allocations: 5571)
+Completed 200 OK in 95ms (Views: 88.7ms | ActiveRecord: 4.9ms | Allocations: 5871)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-21 10:43:47 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 3525)
+Completed 200 OK in 80ms (Views: 40.1ms | ActiveRecord: 3.3ms | Allocations: 5142)
+
+

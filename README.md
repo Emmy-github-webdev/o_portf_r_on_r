@@ -80,6 +80,9 @@ Run the application and confirm the database setup is working without error
 - Possible error for logout - No route matches [GET] "/logout"
 - Solution - If you want to use :delete method for security reasons and not be dependent on jquery-ujs you can use button_to instead of link_to, like:
 button_to "Log out", destroy_user_session_path, method: :delete
+- Possible error when add custom attributes - undefined method `before_filter' for AuthorsController:Class
+- Solution - Try using before_action :zero_authors_or_authenticated, only: [:new, :create] Instead of before_filter :zero_authors_or_authenticated, only: [:new, :create]
+- Note - before_filter has been deprecated in Rails 5.0 and removed in 5.1.
 
 > Deployment instructions
 
