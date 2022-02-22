@@ -8448,3 +8448,38 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 3853)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-22 09:17:37 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 127.9ms | Allocations: 8339)
+  Rendered layout layouts/application.html.erb (Duration: 190.1ms | Allocations: 21991)
+Completed 200 OK in 236ms (Views: 194.2ms | ActiveRecord: 26.6ms | Allocations: 28062)
+
+
+Started GET "/blogs?q=facebook" for 127.0.0.1 at 2022-02-22 09:17:53 +0100
+Processing by BlogsController#index as HTML
+  Parameters: {"q"=>"facebook"}
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 2.4ms | Allocations: 114)
+  Rendered blogs/_blog.html.erb (Duration: 1.4ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 2.0ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.0ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/application (Duration: 43.9ms | Allocations: 2430)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 4816)
+Completed 200 OK in 69ms (Views: 64.4ms | ActiveRecord: 1.7ms | Allocations: 6082)
+
+
