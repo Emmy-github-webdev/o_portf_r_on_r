@@ -7267,3 +7267,1184 @@ Processing by PagesController#home as TURBO_STREAM
 Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 2.5ms | Allocations: 5525)
 
 
+Started GET "/login" for 127.0.0.1 at 2022-02-21 18:44:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.8ms | Allocations: 1378)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 47.8ms | Allocations: 7495)
+  Rendered layout layouts/application.html.erb (Duration: 328.5ms | Allocations: 41684)
+Completed 200 OK in 449ms (Views: 348.9ms | ActiveRecord: 16.9ms | Allocations: 58985)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-21 18:44:15 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 850ms (ActiveRecord: 2.8ms | Allocations: 6873)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:44:16 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  Rendered pages/home.html.erb within layouts/application (Duration: 21.7ms | Allocations: 3446)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 3541)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.3ms | Allocations: 9604)
+
+
+  
+ActionView::Template::Error (undefined method `split' for nil:NilClass
+
+    self.name.split.first
+             ^^^^^^):
+    1: <h1>Hi, <%= current_user.first_name if current_user %> </h1>
+    2: 
+    3: <h2>Blogs</h2>
+    4: <%=  @blogs.inspect %>
+  
+app/models/user.rb:9:in `first_name'
+app/views/pages/home.html.erb:1
+  [1m[36mUser Update All (55.5ms)[0m  [1m[33mUPDATE "users" SET "name" = $1[0m  [["name", "Emmanuel Ogah"]]
+Started GET "/login" for 127.0.0.1 at 2022-02-21 18:46:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 140ms (ActiveRecord: 22.9ms | Allocations: 15599)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:46:27 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 152.0ms | Allocations: 14195)
+  Rendered layout layouts/application.html.erb (Duration: 394.9ms | Allocations: 48820)
+Completed 200 OK in 483ms (Views: 374.5ms | ActiveRecord: 33.1ms | Allocations: 59720)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 18:46:32 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 35ms (ActiveRecord: 1.2ms | Allocations: 3668)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:46:32 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 46.9ms | Allocations: 2945)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 5205)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 4.2ms | Allocations: 5601)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-21 18:46:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 18.5ms | Allocations: 1376)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.4ms | Allocations: 5339)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 7684)
+Completed 200 OK in 118ms (Views: 110.9ms | ActiveRecord: 0.0ms | Allocations: 9293)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-21 18:46:49 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test2@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 850ms (ActiveRecord: 1.8ms | Allocations: 10577)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:46:50 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 34.8ms | Allocations: 3660)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 5971)
+Completed 200 OK in 54ms (Views: 48.6ms | ActiveRecord: 3.8ms | Allocations: 6329)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-21 18:53:33 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 100ms (ActiveRecord: 30.2ms | Allocations: 4351)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 18:53:33 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 25.8ms | Allocations: 2765)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 4892)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 3.2ms | Allocations: 5192)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-21 20:46:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (38.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Started GET "/" for 127.0.0.1 at 2022-02-21 20:46:16 +0100
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (71.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mBlog Load (13.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (51.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mSkill Load (52.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 488.5ms | Allocations: 20114)
+  Rendered pages/home.html.erb within layouts/application (Duration: 566.4ms | Allocations: 23516)
+  Rendered layout layouts/application.html.erb (Duration: 1085.7ms | Allocations: 76226)
+Completed 200 OK in 1092ms (Views: 848.9ms | ActiveRecord: 240.5ms | Allocations: 76922)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1226.3ms | Allocations: 84869)
+Completed 200 OK in 1794ms (Views: 989.1ms | ActiveRecord: 309.3ms | Allocations: 99225)
+
+
+Started GET "/portfolio/4" for 127.0.0.1 at 2022-02-21 20:46:39 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPortfolio Load (39.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (22.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 335.0ms | Allocations: 7214)
+  Rendered layout layouts/application.html.erb (Duration: 354.6ms | Allocations: 9901)
+Completed 200 OK in 627ms (Views: 336.3ms | ActiveRecord: 76.5ms | Allocations: 20503)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2022-02-21 20:46:51 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 21.1ms | Allocations: 728)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 3061)
+Completed 200 OK in 60ms (Views: 45.0ms | ActiveRecord: 3.6ms | Allocations: 3912)
+
+
+Started GET "/portfolio/6" for 127.0.0.1 at 2022-02-21 20:47:01 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (2.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 3036)
+Completed 200 OK in 54ms (Views: 41.4ms | ActiveRecord: 3.9ms | Allocations: 3834)
+
+
+Started GET "/portfolio" for 127.0.0.1 at 2022-02-21 20:47:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/portfolio"):
+  
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 20:47:17 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 64.5ms | Allocations: 3657)
+  Rendered layout layouts/application.html.erb (Duration: 93.8ms | Allocations: 5937)
+Completed 200 OK in 98ms (Views: 94.4ms | ActiveRecord: 1.5ms | Allocations: 6320)
+
+
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-02-21 20:47:28 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (4.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 3]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 759)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 3073)
+Completed 200 OK in 85ms (Views: 69.1ms | ActiveRecord: 6.2ms | Allocations: 3899)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2022-02-21 20:47:53 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (3.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (20.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 138.2ms | Allocations: 12690)
+  Rendered layout layouts/application.html.erb (Duration: 150.4ms | Allocations: 15240)
+Completed 200 OK in 171ms (Views: 127.6ms | ActiveRecord: 28.3ms | Allocations: 16087)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-21 20:55:06 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (2.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 21.1ms | Allocations: 484)
+  Rendered blogs/_blog.html.erb (Duration: 1.3ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/application (Duration: 216.6ms | Allocations: 6050)
+  Rendered layout layouts/application.html.erb (Duration: 234.9ms | Allocations: 8441)
+Completed 200 OK in 245ms (Views: 241.4ms | ActiveRecord: 25.8ms | Allocations: 9658)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 20:59:06 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 44.8ms | Allocations: 3052)
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 5213)
+Completed 200 OK in 78ms (Views: 69.5ms | ActiveRecord: 2.5ms | Allocations: 5535)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 20:59:44 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 44.1ms | Allocations: 2943)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 5098)
+Completed 200 OK in 69ms (Views: 64.8ms | ActiveRecord: 1.8ms | Allocations: 5380)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2022-02-21 21:00:12 +0100
+Processing by PortfoliosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/_form.html.erb (Duration: 441.6ms | Allocations: 4774)
+  Rendered portfolios/new.html.erb within layouts/application (Duration: 475.8ms | Allocations: 5138)
+  Rendered layout layouts/application.html.erb (Duration: 496.9ms | Allocations: 7457)
+Completed 200 OK in 693ms (Views: 499.8ms | ActiveRecord: 0.0ms | Allocations: 14631)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2022-02-21 21:01:23 +0100
+Processing by PortfoliosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Topic 1", "subtitle"=>"Topic 1 subtitle", "body"=>"description of of topic 1", "technologies_attributes"=>{"0"=>{"name"=>"Javascript"}, "1"=>{"name"=>"HTML"}, "2"=>{"name"=>"Redux"}}}, "commit"=>"Create Portfolio"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mPortfolio Create (45.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Topic 1"], ["subtitle", "Topic 1 subtitle"], ["body", "description of of topic 1"], ["main_image", "http://placehold.it/600X400"], ["thumb_image", "http://placehold.it/350X200"], ["created_at", "2022-02-21 20:01:23.654479"], ["updated_at", "2022-02-21 20:01:23.654479"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (25.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Javascript"], ["portfolio_id", 12], ["created_at", "2022-02-21 20:01:23.715360"], ["updated_at", "2022-02-21 20:01:23.715360"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (1.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "HTML"], ["portfolio_id", 12], ["created_at", "2022-02-21 20:01:23.748710"], ["updated_at", "2022-02-21 20:01:23.748710"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTechnology Create (1.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Redux"], ["portfolio_id", 12], ["created_at", "2022-02-21 20:01:23.755858"], ["updated_at", "2022-02-21 20:01:23.755858"]]
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (30.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:21:in `block in create'
+Redirected to http://127.0.0.1:3000/portfolios
+Completed 302 Found in 162ms (ActiveRecord: 105.5ms | Allocations: 7774)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 21:01:23 +0100
+Processing by PortfoliosController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 3210)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 5482)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 1.8ms | Allocations: 5857)
+
+
+Started GET "/portfolio/12" for 127.0.0.1 at 2022-02-21 21:41:37 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 12]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 45.2ms | Allocations: 5981)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 7350)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 35.4ms | Allocations: 18119)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <% if current_user %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+
+    <%= if session[:source] %>
+      Thanks for visiting me from <%= session[:source]%>
+    <% end %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <% if current_user %>
+17:        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:    
+24:        <%= if session[:source] %>
+25:          Thanks for visiting me from <%= session[:source]%>
+26:        <% end %>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 21:42:36 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 3726)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 5141)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.1ms | Allocations: 5501)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <% if current_user %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+
+    <%= if session[:source] %>
+      Thanks for visiting me from <%= session[:source]%>
+    <% end %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <% if current_user %>
+17:        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:    
+24:        <%= if session[:source] %>
+25:          Thanks for visiting me from <%= session[:source]%>
+26:        <% end %>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 21:42:43 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 3130)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 4550)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.9ms | Allocations: 4819)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <% if current_user %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+
+    <%= if session[:source] %>
+      Thanks for visiting me from <%= session[:source]%>
+    <% end %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <% if current_user %>
+17:        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:    
+24:        <%= if session[:source] %>
+25:          Thanks for visiting me from <%= session[:source]%>
+26:        <% end %>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 21:43:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 124.4ms | Allocations: 13073)
+  Rendered layout layouts/application.html.erb (Duration: 131.1ms | Allocations: 15133)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 15.7ms | Allocations: 26240)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>OPortfROnR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <% if current_user %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+     <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+
+    <%= if session[:source] %>
+      Thanks for visiting me from <%= session[:source]%>
+    <% end %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>OPortfROnR</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:       <p class="notice"><%= notice %></p>
+15:       <p class="alert"><%= alert %></p>
+16:       <% if current_user %>
+17:        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+18:        <% else %>
+19:         <%= link_to "Register", new_user_registration_path %>
+20:          <%= link_to "Login", new_user_session_path %>
+21:        <% end %>
+22:        <%= yield %>
+23:    
+24:        <%= if session[:source] %>
+25:          Thanks for visiting me from <%= session[:source]%>
+26:        <% end %>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:24: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/application.html.erb:26: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `end', expecting ')'
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-21 21:43:49 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (3.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 43.1ms | Allocations: 3875)
+  Rendered layout layouts/application.html.erb (Duration: 300.0ms | Allocations: 37950)
+Completed 200 OK in 315ms (Views: 309.6ms | ActiveRecord: 3.1ms | Allocations: 39209)
+
+
+Started GET "/portfolio/2" for 127.0.0.1 at 2022-02-21 21:43:54 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (3.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 2]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 60.2ms | Allocations: 7622)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | Allocations: 10165)
+Completed 200 OK in 152ms (Views: 71.3ms | ActiveRecord: 12.5ms | Allocations: 18594)
+
+
+Started GET "/portfolio/12" for 127.0.0.1 at 2022-02-21 21:44:20 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (2.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 12]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 63.2ms | Allocations: 5306)
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 7863)
+Completed 200 OK in 122ms (Views: 102.2ms | ActiveRecord: 10.3ms | Allocations: 8767)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-22 08:33:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (71.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Started GET "/" for 127.0.0.1 at 2022-02-22 08:33:24 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (24.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBlog Load (74.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (47.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  [1m[36mSkill Load (45.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 597.6ms | Allocations: 21985)
+  Rendered pages/home.html.erb within layouts/application (Duration: 603.4ms | Allocations: 22396)
+  Rendered layout layouts/application.html.erb (Duration: 1720.3ms | Allocations: 85212)
+Completed 200 OK in 2311ms (Views: 1464.3ms | ActiveRecord: 337.1ms | Allocations: 99252)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1769.3ms | Allocations: 87268)
+Completed 200 OK in 2400ms (Views: 1629.9ms | ActiveRecord: 221.6ms | Allocations: 102189)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-22 08:33:47 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (49.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 155.9ms | Allocations: 8729)
+  Rendered layout layouts/application.html.erb (Duration: 180.3ms | Allocations: 11103)
+Completed 200 OK in 391ms (Views: 132.0ms | ActiveRecord: 62.0ms | Allocations: 14713)
+
+
+Started GET "/portfolio/5" for 127.0.0.1 at 2022-02-22 08:34:02 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (29.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 5]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 599.9ms | Allocations: 7172)
+  Rendered layout layouts/application.html.erb (Duration: 626.0ms | Allocations: 9708)
+Completed 200 OK in 794ms (Views: 593.4ms | ActiveRecord: 37.0ms | Allocations: 17645)
+
+
+Started GET "/portfolio/5" for 127.0.0.1 at 2022-02-22 08:38:31 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 5]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 30.5ms | Allocations: 4523)
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 18916)
+Completed 200 OK in 164ms (Views: 82.5ms | ActiveRecord: 17.8ms | Allocations: 27554)
+
+
+Started GET "/portfolio/5" for 127.0.0.1 at 2022-02-22 08:38:41 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (2.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 5]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 728)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 3050)
+Completed 200 OK in 48ms (Views: 34.5ms | ActiveRecord: 4.2ms | Allocations: 3923)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-22 08:38:54 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (10.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 3661)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 5808)
+Completed 200 OK in 83ms (Views: 68.4ms | ActiveRecord: 10.1ms | Allocations: 6181)
+
+
+Started GET "/portfolio/6" for 127.0.0.1 at 2022-02-22 08:39:02 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 723)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 3034)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 2.2ms | Allocations: 3838)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-22 08:39:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.1ms | Allocations: 1373)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 214.9ms | Allocations: 6678)
+  Rendered layout layouts/application.html.erb (Duration: 228.6ms | Allocations: 9024)
+Completed 200 OK in 332ms (Views: 237.0ms | ActiveRecord: 19.5ms | Allocations: 18344)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-22 08:39:23 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (42.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 929ms (ActiveRecord: 42.3ms | Allocations: 5318)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-22 08:39:24 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 96.9ms | Allocations: 7532)
+  Rendered layout layouts/application.html.erb (Duration: 113.2ms | Allocations: 9990)
+Completed 200 OK in 140ms (Views: 93.1ms | ActiveRecord: 26.1ms | Allocations: 14314)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-22 08:39:39 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 114.7ms | Allocations: 3150)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 133.9ms | Allocations: 6096)
+Completed 200 OK in 141ms (Views: 136.8ms | ActiveRecord: 2.5ms | Allocations: 6414)
+
+
+Started GET "/portfolio/4" for 127.0.0.1 at 2022-02-22 08:39:47 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 748)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 3855)
+Completed 200 OK in 31ms (Views: 22.0ms | ActiveRecord: 2.7ms | Allocations: 4669)
+
+
+Started GET "/portfolio/4" for 127.0.0.1 at 2022-02-22 08:43:09 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 1364)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 5381)
+Completed 200 OK in 67ms (Views: 54.8ms | ActiveRecord: 3.6ms | Allocations: 7084)
+
+
+Started GET "/portfolio/4?d=twitter" for 127.0.0.1 at 2022-02-22 08:46:29 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"d"=>"twitter", "id"=>"4"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 1276)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 5390)
+Completed 200 OK in 103ms (Views: 90.1ms | ActiveRecord: 3.6ms | Allocations: 7102)
+
+
+Started GET "/portfolio/4?q=twitter" for 127.0.0.1 at 2022-02-22 08:46:57 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"4"}
+  [1m[36mPortfolio Load (3.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 721)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 3666)
+Completed 200 OK in 49ms (Views: 35.0ms | ActiveRecord: 6.1ms | Allocations: 4670)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-22 08:47:19 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 30.2ms | Allocations: 482)
+  Rendered blogs/_blog.html.erb (Duration: 1.0ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 2.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/application (Duration: 134.8ms | Allocations: 3678)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 163.3ms | Allocations: 7014)
+Completed 200 OK in 176ms (Views: 170.2ms | ActiveRecord: 2.6ms | Allocations: 8250)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-22 08:48:17 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 5.8ms | Allocations: 388)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.3ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 2.3ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.2ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.0ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 3295)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 7154)
+Completed 200 OK in 96ms (Views: 88.2ms | ActiveRecord: 2.6ms | Allocations: 8377)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-22 08:49:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 1.9ms | Allocations: 1595)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-22 08:49:01 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:1
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.9ms | Allocations: 3935)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 6372)
+Completed 200 OK in 58ms (Views: 51.2ms | ActiveRecord: 3.6ms | Allocations: 7382)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-02-22 08:49:06 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 86ms (ActiveRecord: 0.8ms | Allocations: 8804)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-22 08:49:06 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2816)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 5064)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 2.3ms | Allocations: 5475)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:49:08 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.3ms | Allocations: 386)
+  Rendered devise/shared/_links.html.erb (Duration: 9.0ms | Allocations: 1071)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.9ms | Allocations: 3838)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 6189)
+Completed 200 OK in 91ms (Views: 77.9ms | ActiveRecord: 0.0ms | Allocations: 7883)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-22 08:49:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 1737)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 4083)
+Completed 200 OK in 76ms (Views: 65.6ms | ActiveRecord: 0.0ms | Allocations: 5520)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:49:25 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 76)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1146)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 3272)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 3946)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-22 08:49:40 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (3.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 70.9ms | Allocations: 3870)
+  Rendered layout layouts/application.html.erb (Duration: 96.4ms | Allocations: 6240)
+Completed 200 OK in 120ms (Views: 110.5ms | ActiveRecord: 3.6ms | Allocations: 7218)
+
+
+Started GET "/portfolio/4" for 127.0.0.1 at 2022-02-22 08:49:44 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 3435)
+Completed 200 OK in 54ms (Views: 41.4ms | ActiveRecord: 3.2ms | Allocations: 4354)
+
+
+Started GET "/portfolio/4?q=twitter" for 127.0.0.1 at 2022-02-22 08:49:58 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"twitter", "id"=>"4"}
+  [1m[36mPortfolio Load (2.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:49:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 4]]
+  ↳ app/views/portfolios/show.html.erb:6
+  Rendered portfolios/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 2882)
+Completed 200 OK in 39ms (Views: 24.2ms | ActiveRecord: 4.2ms | Allocations: 3853)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-02-22 08:50:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:50:28 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.9ms | Allocations: 22)
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 77)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 3485)
+Completed 200 OK in 70ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 4195)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:51:10 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 76)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 3274)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 3850)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:51:15 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 76)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 3274)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 3850)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-22 08:51:18 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 120)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 944)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 3074)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.0ms | Allocations: 3712)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:51:21 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 21)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 76)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 22.6ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 3274)
+Completed 200 OK in 61ms (Views: 51.7ms | ActiveRecord: 0.0ms | Allocations: 3853)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-22 08:51:23 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 21)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 76)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 3274)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 3853)
+
+
