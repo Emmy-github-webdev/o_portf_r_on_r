@@ -10157,3 +10157,85 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 5.4ms | Allocations: 5412)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-23 09:45:45 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  Rendered pages/home.html.erb within layouts/application (Duration: 126.7ms | Allocations: 5642)
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 492)
+  Rendered layout layouts/application.html.erb (Duration: 165.4ms | Allocations: 10675)
+Completed 200 OK in 175ms (Views: 172.4ms | ActiveRecord: 27.5ms | Allocations: 11866)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-23 09:45:54 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 2.9ms | Allocations: 388)
+  Rendered blogs/_blog.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 7.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.8ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 78.1ms | Allocations: 3269)
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 114)
+  Rendered layout layouts/blog.html.erb (Duration: 114.5ms | Allocations: 7892)
+Completed 200 OK in 122ms (Views: 118.1ms | ActiveRecord: 1.6ms | Allocations: 8906)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-23 09:45:55 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 67)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.6ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.9ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 0.7ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 2.0ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 66)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 66)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 25.6ms | Allocations: 2321)
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 103)
+  Rendered layout layouts/blog.html.erb (Duration: 45.9ms | Allocations: 4692)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 1.3ms | Allocations: 4997)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-23 09:46:07 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 61.6ms | Allocations: 4055)
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 117)
+  Rendered layout layouts/portfolio.html.erb (Duration: 101.8ms | Allocations: 8697)
+Completed 200 OK in 121ms (Views: 115.7ms | ActiveRecord: 1.9ms | Allocations: 9665)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-23 09:46:07 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (13.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 49.5ms | Allocations: 3334)
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 104)
+  Rendered layout layouts/portfolio.html.erb (Duration: 64.6ms | Allocations: 5720)
+Completed 200 OK in 83ms (Views: 56.0ms | ActiveRecord: 13.6ms | Allocations: 6025)
+
+
