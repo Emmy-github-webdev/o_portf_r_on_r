@@ -87,5 +87,7 @@ button_to "Log out", destroy_user_session_path, method: :delete
 > Partials 
 - They are particularly useful for reusing the same markup between different views, layouts, and even other partials. It is identified by underscore. Example _filename
 
+> View helpers are similar to partials. While view helpers are written in Ruby and located in helper folder, partials are written in html and located in view folder
+
 > Deployment instructions
 
