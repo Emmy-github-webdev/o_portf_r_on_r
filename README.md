@@ -91,5 +91,9 @@ button_to "Log out", destroy_user_session_path, method: :delete
 
 > [ActionView Helper Mthods](https://guides.rubyonrails.org/action_view_helpers.html)
 
+> Debugging
+
+- Puts Debugging by using "puts @blog.inspect". This print out the content on the terminal to ensure data work accodeingly
+
 > Deployment instructions
 
