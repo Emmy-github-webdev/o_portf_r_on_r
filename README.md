@@ -89,5 +89,7 @@ button_to "Log out", destroy_user_session_path, method: :delete
 
 > View helpers are similar to partials. While view helpers are written in Ruby and located in helper folder, partials are written in html and located in view folder
 
+> [ActionView Helper Mthods](https://guides.rubyonrails.org/action_view_helpers.html)
+
 > Deployment instructions
 
