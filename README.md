@@ -84,5 +84,12 @@ button_to "Log out", destroy_user_session_path, method: :delete
 - Solution - Try using before_action :zero_authors_or_authenticated, only: [:new, :create] Instead of before_filter :zero_authors_or_authenticated, only: [:new, :create]
 - Note - before_filter has been deprecated in Rails 5.0 and removed in 5.1.
 
+> Partials 
+- They are particularly useful for reusing the same markup between different views, layouts, and even other partials. It is identified by underscore. Example _filename
+
+> View helpers are similar to partials. While view helpers are written in Ruby and located in helper folder, partials are written in html and located in view folder
+
+> [ActionView Helper Mthods](https://guides.rubyonrails.org/action_view_helpers.html)
+
 > Deployment instructions
 

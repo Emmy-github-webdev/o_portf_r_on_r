@@ -4,6 +4,11 @@
     <%= link_to blog.title, blog_path(blog)%>
   </p>
 
+   <p>
+    <strong></strong>
+    Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago
+  </p>
+
   <p>
     <strong>Body:</strong>
     <%= blog.body %>

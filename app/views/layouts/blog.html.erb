@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="<%= @seo_keywords %>">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "blogs", media: 'all', "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+
+   <%= login_helper %>
+
+    <%= yield %>
+
+   <%= render 'shared/nav', location: 'bottom' %>
+
+    <%= source_helper('blog') %>
+
+  </body>
+</html>
