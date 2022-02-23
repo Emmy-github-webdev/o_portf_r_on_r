@@ -93,7 +93,15 @@ button_to "Log out", destroy_user_session_path, method: :delete
 
 > Debugging
 
-- Puts Debugging by using "puts @blog.inspect". This print out the content on the terminal to ensure data work accodeingly
+### Puts Debugging
+- By using "puts @blog.inspect". This print out the content on the terminal to ensure data work accodeingly
+
+> Byebug in Rails 
+- By default Rails file give us access to byebug
+- Add "byebug" as a breakpoint for step by step debugging
+- The application will run to the breakpoint and stop
+- Type what you want to inspect. Example params, session, @blog
+- To get out of the debug type "continue" 
 
 > Deployment instructions
 
