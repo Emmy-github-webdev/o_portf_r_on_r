@@ -120,6 +120,9 @@ button_to "Log out", destroy_user_session_path, method: :delete
 - Note: Should your application style file is application.css, rename it to application.scss
 Add Bootstrap dependencies and Bootstrap to your application.js
 
+## Authorization using petergate gem
+> [Petergate Gem](https://github.com/elorest/petergate)
+
 
 > Deployment instructions
 
