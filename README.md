@@ -69,7 +69,6 @@ Run the application and confirm the database setup is working without error
 > [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on)
 - Add tags to post
 > Authentication
-- [Ruby Gems](https://rubygems.org/)
 - [Devise](https://rubygems.org/search?query=devise)
 - Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
 - Run bundle install
@@ -108,6 +107,19 @@ button_to "Log out", destroy_user_session_path, method: :delete
 - Add 'binding.pry' in the required line of the code
 - Run the application
 - Check for the neccessary parameters
+
+## [Ruby Gems](https://rubygems.org/)
+> Add Bootsrap CDN to the application.html.erb in the view layout. However, this is not the best practice. Should the CDN goes down or the class name changed, what happens to the styling of the application
+
+> Install Bootstrap in your Ruby apps using Bundler (recommended) and RubyGems by adding the following line to your Gemfile
+[See the gem’s README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details of installation process.
+- Add bootstrap to your Gemfile: gem 'bootstrap', '~> 5.1.3'
+- bundle install and restart your server to make the files available through the pipeline.
+- To see the sprockets-rails version, go to the Gemfile.lock and search for it
+- Import Bootstrap styles in app/assets/stylesheets/application.scss: @import "bootstrap";
+- Note: Should your application style file is application.css, rename it to application.scss
+Add Bootstrap dependencies and Bootstrap to your application.js
+
 
 > Deployment instructions
 
