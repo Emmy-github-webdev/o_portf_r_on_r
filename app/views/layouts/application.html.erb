@@ -12,15 +12,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+  <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
    
-   <%= render 'shared/nav', location: 'top' %>
+      <%= render 'shared/application_nav' %>
 
-    <%= login_helper %>
-    <%= yield %>
-    <p><%= @copyright %></p>
-  <%= source_helper('application') %>
+        <%= login_helper %>
+        <%= yield %>
+        <p><%= @copyright %></p>
+      <%= source_helper('application') %>
+    </div>
   </body>
 </html>
