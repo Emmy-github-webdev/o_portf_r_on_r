@@ -12145,3 +12145,786 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 6314)
 
 
+Started GET "/about" for 127.0.0.1 at 2022-02-25 09:53:25 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.7ms | Allocations: 170)
+  Rendered shared/_application_nav.html.erb (Duration: 1.7ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 116.1ms | Allocations: 6058)
+Completed 200 OK in 119ms (Views: 117.7ms | ActiveRecord: 0.0ms | Allocations: 6416)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 09:57:14 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 5.1ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 5914)
+Completed 200 OK in 66ms (Views: 62.7ms | Allocations: 6212)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 09:58:49 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.4ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 18453.2ms | Allocations: 35051)
+Completed 200 OK in 18466ms (Views: 18464.4ms | Allocations: 35350)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 09:59:37 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.9ms | Allocations: 194)
+  Rendered shared/_application_nav.html.erb (Duration: 4.9ms | Allocations: 812)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 106.8ms | Allocations: 7595)
+Completed 200 OK in 132ms (Views: 128.0ms | Allocations: 8778)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:00:05 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.3ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 9.5ms | Allocations: 817)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 7602)
+Completed 200 OK in 95ms (Views: 90.6ms | Allocations: 8805)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:00:35 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.1ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 5.7ms | Allocations: 812)
+  Rendered shared/_application_footer.html.erb (Duration: 1.7ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 94.3ms | Allocations: 7591)
+Completed 200 OK in 103ms (Views: 101.2ms | Allocations: 8794)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:05:18 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.7ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 4.6ms | Allocations: 812)
+  Rendered shared/_application_footer.html.erb (Duration: 1.4ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 7597)
+Completed 200 OK in 77ms (Views: 74.5ms | Allocations: 8800)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:05:36 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.6ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 4.8ms | Allocations: 812)
+  Rendered shared/_application_footer.html.erb (Duration: 1.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 7592)
+Completed 200 OK in 86ms (Views: 80.8ms | Allocations: 8795)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:05:58 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.7ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 16.3ms | Allocations: 812)
+  Rendered shared/_application_footer.html.erb (Duration: 2.2ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 7588)
+Completed 200 OK in 131ms (Views: 119.6ms | Allocations: 8792)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:10:34 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.4ms | Allocations: 193)
+  Rendered shared/_application_nav.html.erb (Duration: 3.8ms | Allocations: 817)
+  Rendered shared/_application_footer.html.erb (Duration: 2.8ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 18548.4ms | Allocations: 36762)
+Completed 200 OK in 18569ms (Views: 18559.4ms | Allocations: 37967)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:11:00 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 178)
+  Rendered shared/_application_nav.html.erb (Duration: 2.5ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 6081)
+Completed 200 OK in 61ms (Views: 57.9ms | Allocations: 6486)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:11:22 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 2.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.5ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 5939)
+Completed 200 OK in 70ms (Views: 67.7ms | Allocations: 6261)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:11:27 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 5896)
+Completed 200 OK in 49ms (Views: 48.0ms | Allocations: 6197)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:11:29 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.9ms | Allocations: 218)
+  Rendered shared/_application_nav.html.erb (Duration: 2.7ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 6114)
+Completed 200 OK in 72ms (Views: 68.2ms | Allocations: 6468)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-25 10:11:31 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-25 10:11:32 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mBlog Load (3.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 8.9ms | Allocations: 595)
+  Rendered blogs/_blog.html.erb (Duration: 2.5ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 2.1ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 2.6ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 4.9ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 3.6ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 3.0ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 2.3ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 1.8ms | Allocations: 132)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 132)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 376.0ms | Allocations: 16643)
+  [1m[36mPortfolio Load (5.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 329.5ms | Allocations: 17872)
+  Rendered layout layouts/blog.html.erb (Duration: 620.2ms | Allocations: 35205)
+Completed 500 Internal Server Error in 634ms (ActiveRecord: 110.0ms | Allocations: 37072)
+
+
+  Rendered shared/_nav.html.erb (Duration: 8.4ms | Allocations: 1035)
+  Rendered layout layouts/portfolio.html.erb (Duration: 448.1ms | Allocations: 30144)
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    15:    <p class="notice"><%= notice %></p>
+    16:    <p class="alert"><%= alert %></p>
+    17: 
+    18:    <%= login_helper %>
+    19: 
+    20:     <%= yield %>
+    21: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/blog.html.erb:18
+Completed 500 Internal Server Error in 518ms (ActiveRecord: 68.5ms | Allocations: 33859)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    18: 
+    19:    <%= render 'shared/nav', location: 'top' %>
+    20: 
+    21:    <%= login_helper %>
+    22: 
+    23:     <%= yield %>
+    24: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/portfolio.html.erb:21
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:11:34 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 42)
+  Rendered shared/_application_nav.html.erb (Duration: 2.0ms | Allocations: 386)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 91.1ms | Allocations: 18984)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.0ms | Allocations: 19372)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:12:04 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 0.9ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 16784.5ms | Allocations: 35068)
+Completed 200 OK in 16790ms (Views: 16787.2ms | ActiveRecord: 0.0ms | Allocations: 35394)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:16:21 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 3.4ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.4ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 5914)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.0ms | Allocations: 6218)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:16:24 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.6ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 2.9ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.5ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 5914)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 6218)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:16:26 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.8ms | Allocations: 38)
+  Rendered shared/_application_nav.html.erb (Duration: 2.3ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 64.3ms | Allocations: 5925)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.0ms | Allocations: 6229)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-25 10:16:28 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (6.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 2.5ms | Allocations: 123)
+  Rendered blogs/_blog.html.erb (Duration: 2.3ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.1ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.2ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 3.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 7.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 5.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.0ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.1ms | Allocations: 122)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 75.5ms | Allocations: 2884)
+  Rendered layout layouts/blog.html.erb (Duration: 132.5ms | Allocations: 9040)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 6.1ms | Allocations: 9308)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    15:    <p class="notice"><%= notice %></p>
+    16:    <p class="alert"><%= alert %></p>
+    17: 
+    18:    <%= login_helper %>
+    19: 
+    20:     <%= yield %>
+    21: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/blog.html.erb:18
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-25 10:16:29 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 56.8ms | Allocations: 3360)
+  Rendered shared/_nav.html.erb (Duration: 1.2ms | Allocations: 114)
+  Rendered layout layouts/portfolio.html.erb (Duration: 204.3ms | Allocations: 25671)
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 1.0ms | Allocations: 26072)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    18: 
+    19:    <%= render 'shared/nav', location: 'top' %>
+    20: 
+    21:    <%= login_helper %>
+    22: 
+    23:     <%= yield %>
+    24: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/portfolio.html.erb:21
+Started GET "/register" for 127.0.0.1 at 2022-02-25 10:16:30 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.6ms | Allocations: 551)
+  Rendered devise/shared/_links.html.erb (Duration: 24.8ms | Allocations: 6689)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 79.2ms | Allocations: 30221)
+  Rendered shared/_application_nav.html.erb (Duration: 1.3ms | Allocations: 368)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 216.6ms | Allocations: 52874)
+Completed 200 OK in 259ms (Views: 243.3ms | ActiveRecord: 0.0ms | Allocations: 63044)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-25 10:16:33 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.4ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 1738)
+  Rendered shared/_application_nav.html.erb (Duration: 3.1ms | Allocations: 361)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 120.0ms | Allocations: 7663)
+Completed 200 OK in 135ms (Views: 130.2ms | ActiveRecord: 0.0ms | Allocations: 9114)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:16:36 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 11.7ms | Allocations: 348)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 5946)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms | Allocations: 6303)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:17:38 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.4ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 21498.0ms | Allocations: 35050)
+Completed 200 OK in 21505ms (Views: 21503.0ms | ActiveRecord: 0.0ms | Allocations: 35379)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:17:59 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.7ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 5914)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 6240)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:18:03 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 2.5ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 5914)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms | Allocations: 6218)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-25 10:18:05 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 4.0ms | Allocations: 157)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.3ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.9ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.0ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 9.9ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.4ms | Allocations: 122)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 78.1ms | Allocations: 3025)
+  Rendered layout layouts/blog.html.erb (Duration: 123.4ms | Allocations: 9183)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 3.3ms | Allocations: 9456)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    15:    <p class="notice"><%= notice %></p>
+    16:    <p class="alert"><%= alert %></p>
+    17: 
+    18:    <%= login_helper %>
+    19: 
+    20:     <%= yield %>
+    21: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/blog.html.erb:18
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-25 10:18:07 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 92.9ms | Allocations: 3342)
+  Rendered shared/_nav.html.erb (Duration: 7.6ms | Allocations: 104)
+  Rendered layout layouts/portfolio.html.erb (Duration: 190.0ms | Allocations: 9687)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 1.5ms | Allocations: 9954)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    18: 
+    19:    <%= render 'shared/nav', location: 'top' %>
+    20: 
+    21:    <%= login_helper %>
+    22: 
+    23:     <%= yield %>
+    24: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/portfolio.html.erb:21
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:18:08 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+  Rendered shared/_application_nav.html.erb (Duration: 1.6ms | Allocations: 345)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 74.5ms | Allocations: 12976)
+Completed 200 OK in 91ms (Views: 77.9ms | ActiveRecord: 0.0ms | Allocations: 14751)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:18:09 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 5902)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 6232)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:19:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 20580.7ms | Allocations: 34887)
+Completed 200 OK in 20592ms (Views: 20586.2ms | ActiveRecord: 0.0ms | Allocations: 35213)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:20:14 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 2.7ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 5914)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.0ms | Allocations: 6218)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:20:22 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 38)
+  Rendered shared/_application_nav.html.erb (Duration: 3.4ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | Allocations: 5931)
+Completed 200 OK in 90ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 6235)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:21:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 36.8ms | Allocations: 1742)
+  Rendered shared/_application_nav.html.erb (Duration: 7.9ms | Allocations: 999)
+  Rendered shared/_application_footer.html.erb (Duration: 0.8ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 21248.6ms | Allocations: 89946)
+Completed 200 OK in 21496ms (Views: 21324.4ms | ActiveRecord: 0.0ms | Allocations: 98041)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:22:08 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.0ms | Allocations: 187)
+  Rendered shared/_application_nav.html.erb (Duration: 1.7ms | Allocations: 379)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 278.0ms | Allocations: 6211)
+Completed 200 OK in 290ms (Views: 286.1ms | ActiveRecord: 0.0ms | Allocations: 6665)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:22:11 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.9ms | Allocations: 38)
+  Rendered shared/_application_nav.html.erb (Duration: 4.2ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 5918)
+Completed 200 OK in 118ms (Views: 110.1ms | ActiveRecord: 0.0ms | Allocations: 6226)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-25 10:22:12 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 142.6ms | Allocations: 12764)
+  Rendered shared/_nav.html.erb (Duration: 4.3ms | Allocations: 458)
+  Rendered layout layouts/portfolio.html.erb (Duration: 196.7ms | Allocations: 20906)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 25.5ms | Allocations: 25248)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    18: 
+    19:    <%= render 'shared/nav', location: 'top' %>
+    20: 
+    21:    <%= login_helper %>
+    22: 
+    23:     <%= yield %>
+    24: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/portfolio.html.erb:21
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:22:14 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 535)
+  Rendered shared/_application_nav.html.erb (Duration: 4.2ms | Allocations: 388)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 7917)
+Completed 200 OK in 365ms (Views: 74.7ms | ActiveRecord: 0.0ms | Allocations: 19987)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:22:19 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 3.2ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 5905)
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.0ms | Allocations: 6217)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:22:22 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 5.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 54.3ms | Allocations: 5911)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:22:30 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 5.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 127.9ms | Allocations: 5914)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.0ms | Allocations: 6219)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:22:33 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.9ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 100.4ms | Allocations: 5908)
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.0ms | Allocations: 6238)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:22:35 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 2.8ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 99.3ms | Allocations: 5905)
+Completed 200 OK in 132ms (Views: 130.0ms | ActiveRecord: 0.0ms | Allocations: 6209)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-02-25 10:22:41 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 2.3ms | Allocations: 38)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 5929)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.0ms | Allocations: 6233)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-25 10:22:42 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 25.6ms | Allocations: 2040)
+  Rendered blogs/_blog.html.erb (Duration: 2.4ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 3.3ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.1ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.4ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.4ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 7.4ms | Allocations: 122)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 192.2ms | Allocations: 10582)
+  Rendered layout layouts/blog.html.erb (Duration: 240.9ms | Allocations: 17438)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 30.8ms | Allocations: 18666)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    15:    <p class="notice"><%= notice %></p>
+    16:    <p class="alert"><%= alert %></p>
+    17: 
+    18:    <%= login_helper %>
+    19: 
+    20:     <%= yield %>
+    21: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/blog.html.erb:18
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-25 10:22:44 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (8.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 509.1ms | Allocations: 99007)
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 108)
+  Rendered layout layouts/portfolio.html.erb (Duration: 576.3ms | Allocations: 106994)
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 72.2ms | Allocations: 117495)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    18: 
+    19:    <%= render 'shared/nav', location: 'top' %>
+    20: 
+    21:    <%= login_helper %>
+    22: 
+    23:     <%= yield %>
+    24: 
+  
+app/helpers/application_helper.rb:5:in `login_helper'
+app/views/layouts/portfolio.html.erb:21
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:22:45 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 30)
+  Rendered shared/_application_nav.html.erb (Duration: 4.2ms | Allocations: 377)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 112.1ms | Allocations: 26938)
+Completed 200 OK in 117ms (Views: 114.9ms | ActiveRecord: 0.0ms | Allocations: 27290)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:25:22 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 48.8ms | Allocations: 5622)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 5716)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 6910)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_me_path' for #<ActionView::Base:0x0000000000e2b8>
+Did you mean?  about_path):
+    2:   <h1 class="cover-heading">Cover your page.</h1>
+    3:   <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    4:   <p class="lead">
+    5:     <a href="<%= link_to about_me_path%>" class="btn btn-lg btn-secondary">Learn more</a>
+    6:   </p>
+    7: </main>
+    8: 
+  
+app/views/pages/home.html.erb:5
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:26:49 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1052)
+  Rendered shared/_application_nav.html.erb (Duration: 4.8ms | Allocations: 780)
+  Rendered shared/_application_footer.html.erb (Duration: 6.2ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 113.7ms | Allocations: 8413)
+Completed 200 OK in 134ms (Views: 131.1ms | ActiveRecord: 0.0ms | Allocations: 9654)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:27:39 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 277)
+  Rendered shared/_application_nav.html.erb (Duration: 3.6ms | Allocations: 783)
+  Rendered shared/_application_footer.html.erb (Duration: 1.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | Allocations: 7662)
+Completed 200 OK in 86ms (Views: 76.3ms | ActiveRecord: 0.0ms | Allocations: 8912)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:27:41 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 166)
+  Rendered shared/_application_nav.html.erb (Duration: 5.3ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 6059)
+Completed 200 OK in 86ms (Views: 78.7ms | ActiveRecord: 0.0ms | Allocations: 6439)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 10:27:44 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 37)
+  Rendered shared/_application_nav.html.erb (Duration: 1.9ms | Allocations: 332)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | Allocations: 5918)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.0ms | Allocations: 6252)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-02-25 10:27:46 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 1.6ms | Allocations: 341)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 5881)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms | Allocations: 6185)
+
+
