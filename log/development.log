@@ -12022,3 +12022,126 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 163ms (Views: 144.5ms | Allocations: 8815)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-25 09:42:59 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 208)
+  Rendered shared/_application_nav.html.erb (Duration: 66.0ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 212.5ms | Allocations: 19682)
+Completed 500 Internal Server Error in 256ms (Allocations: 26116)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="masthead mb-auto">
+  <div class="inner">
+  <h3 class="masthead-brand">Emmanuel Ogah</h3>
+    <nav class="nav nav-masthead justify-content-center">
+      <%= link_to 'Home', root_path, class: 'nav-link active' %>
+      <%= link_to 'About Me', about_path, class: 'nav-link' %>
+      <%= link_to 'Contact', contact_path, class: 'nav-link' %>
+      <%= link_to 'Blog', blogs_path, class: 'nav-link' %>
+      <%= link_to 'Portfolio', portfolios_path, class: 'nav-link' %>
+      <%= login_helper, 'nav-link' %>
+    </nav>
+  </div>
+</header>
+):
+1:    <header class="masthead mb-auto">
+2:      <div class="inner">
+3:      <h3 class="masthead-brand">Emmanuel Ogah</h3>
+4:        <nav class="nav nav-masthead justify-content-center">
+5:          <%= link_to 'Home', root_path, class: 'nav-link active' %>
+6:          <%= link_to 'About Me', about_path, class: 'nav-link' %>
+7:          <%= link_to 'Contact', contact_path, class: 'nav-link' %>
+8:          <%= link_to 'Blog', blogs_path, class: 'nav-link' %>
+9:          <%= link_to 'Portfolio', portfolios_path, class: 'nav-link' %>
+10:          <%= login_helper, 'nav-link' %>
+11:        </nav>
+12:      </div>
+13:    </header>
+  
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/shared/_application_nav.html.erb:10: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/shared/_application_nav.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:18
+Started GET "/" for 127.0.0.1 at 2022-02-25 09:43:44 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 205)
+  Rendered shared/_application_nav.html.erb (Duration: 20.4ms | Allocations: 4044)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 10534)
+Completed 500 Internal Server Error in 78ms (Allocations: 11746)
+
+
+  
+ActionView::Template::Error (uninitialized constant ApplicationHelper::GuestUser
+
+    if current_user.is_a?(GuestUser)
+                          ^^^^^^^^^):
+     7:       <%= link_to 'Contact', contact_path, class: 'nav-link' %>
+     8:       <%= link_to 'Blog', blogs_path, class: 'nav-link' %>
+     9:       <%= link_to 'Portfolio', portfolios_path, class: 'nav-link' %>
+    10:       <%= login_helper 'nav-link' %>
+    11:     </nav>
+    12:   </div>
+    13: </header>
+  
+app/helpers/application_helper.rb:6:in `login_helper'
+app/views/shared/_application_nav.html.erb:10
+app/views/layouts/application.html.erb:18
+Started GET "/" for 127.0.0.1 at 2022-02-25 09:46:17 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 26)
+  Rendered shared/_application_nav.html.erb (Duration: 4.8ms | Allocations: 455)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 17893)
+Completed 200 OK in 94ms (Views: 72.7ms | Allocations: 23999)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 09:47:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 26)
+  Rendered shared/_application_nav.html.erb (Duration: 1.6ms | Allocations: 455)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 17524)
+Completed 200 OK in 162ms (Views: 95.6ms | Allocations: 23627)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-25 09:50:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 33.6ms | Allocations: 1368)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 296.2ms | Allocations: 5328)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 366)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 324.5ms | Allocations: 11262)
+Completed 200 OK in 519ms (Views: 335.5ms | ActiveRecord: 34.3ms | Allocations: 23997)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-25 09:51:09 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered shared/_application_nav.html.erb (Duration: 4.3ms | Allocations: 348)
+  Rendered shared/_application_footer.html.erb (Duration: 0.4ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 5938)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 6314)
+
+
