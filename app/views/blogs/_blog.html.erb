@@ -2,7 +2,7 @@
   <div class="blog-post">
     <h2 class="blog-post-title"> <%= link_to blog.title, blog_path(blog)%></h2>
     <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago</p>
-    <p class="blog-post-meta"> <%= link_to blog.status, toggle_status_blog_path(blog) %></p>
+    <p class="blog-post-meta"> <%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:portfolio_admin)  %></p>
     <p><%= blog.body %></p>
   </div>
 </div>
