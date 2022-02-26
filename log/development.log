@@ -14159,3 +14159,174 @@ Processing by Devise::PasswordsController#new as HTML
 Completed 200 OK in 109ms (Views: 104.6ms | Allocations: 9081)
 
 
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:17:36 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 4.0ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2580)
+  Rendered shared/_application_nav.html.erb (Duration: 4.3ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.9ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 9648)
+Completed 200 OK in 97ms (Views: 84.5ms | Allocations: 11274)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:27:40 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 4.8ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 8.0ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 2577)
+  Rendered shared/_application_nav.html.erb (Duration: 5.4ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 2.1ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 9645)
+Completed 200 OK in 93ms (Views: 88.8ms | Allocations: 11265)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:33:10 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.4ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 4.5ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 2577)
+  Rendered shared/_application_nav.html.erb (Duration: 4.4ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | Allocations: 9645)
+Completed 200 OK in 93ms (Views: 85.5ms | Allocations: 11241)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:34:33 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2576)
+  Rendered shared/_application_nav.html.erb (Duration: 3.5ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.4ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 9644)
+Completed 200 OK in 82ms (Views: 67.7ms | Allocations: 11264)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:34:47 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.6ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 28.1ms | Allocations: 2576)
+  Rendered shared/_application_nav.html.erb (Duration: 3.2ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.2ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 69.9ms | Allocations: 9644)
+Completed 200 OK in 79ms (Views: 75.5ms | Allocations: 11258)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2022-02-26 09:36:16 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 5.3ms | Allocations: 921)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 2588)
+  Rendered shared/_application_nav.html.erb (Duration: 5.7ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 2.0ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 9656)
+Completed 200 OK in 105ms (Views: 98.0ms | Allocations: 11264)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-02-26 09:37:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 373)
+  Rendered devise/shared/_links.html.erb (Duration: 6.3ms | Allocations: 881)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 3389)
+  Rendered shared/_application_nav.html.erb (Duration: 9.3ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 10456)
+Completed 200 OK in 107ms (Views: 102.3ms | Allocations: 12079)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-26 09:37:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 1803)
+  Rendered shared/_application_nav.html.erb (Duration: 1.5ms | Allocations: 361)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 7728)
+Completed 200 OK in 97ms (Views: 93.1ms | Allocations: 9184)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-26 09:38:42 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 2ms (Allocations: 297)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-26 09:38:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 18.0ms | Allocations: 924)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.9ms | Allocations: 2648)
+  Rendered shared/_application_nav.html.erb (Duration: 7.4ms | Allocations: 747)
+  Rendered shared/_application_footer.html.erb (Duration: 1.9ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 98.8ms | Allocations: 9716)
+Completed 200 OK in 128ms (Views: 124.6ms | Allocations: 11370)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-26 09:38:52 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 2ms (Allocations: 339)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-26 09:38:52 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 120)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 963)
+  Rendered shared/_application_nav.html.erb (Duration: 5.5ms | Allocations: 307)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 6647)
+Completed 200 OK in 81ms (Views: 76.3ms | Allocations: 7339)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-26 09:39:08 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/edit
+Completed 302 Found in 1182ms (ActiveRecord: 48.4ms | Allocations: 9218)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-26 09:39:09 +0100
+Processing by Devise::RegistrationsController#edit as TURBO_STREAM
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 375)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 24.3ms | Allocations: 3251)
+  Rendered shared/_application_nav.html.erb (Duration: 1.9ms | Allocations: 270)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 9179)
+Completed 200 OK in 89ms (Views: 67.9ms | ActiveRecord: 1.4ms | Allocations: 11837)
+
+
+Started GET "/edit" for 127.0.0.1 at 2022-02-26 09:40:04 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 373)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3102)
+  Rendered shared/_application_nav.html.erb (Duration: 5.9ms | Allocations: 656)
+  Rendered shared/_application_footer.html.erb (Duration: 2.1ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 81.5ms | Allocations: 10078)
+Completed 200 OK in 108ms (Views: 93.2ms | ActiveRecord: 1.1ms | Allocations: 12937)
+
+
