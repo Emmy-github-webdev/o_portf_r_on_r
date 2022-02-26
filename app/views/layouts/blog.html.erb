@@ -13,17 +13,7 @@
   </head>
 
   <body>
-  <!--Navigation start -->
-   <header class="masthead mb-auto">
-      <div class="container">
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Contact</a>
-        </nav>
-      </div>
-    </header>
-  <!-- Navigation end -->
+  <%= render 'shared/blog_nav' %>
 
   <!-- Header start-->
   <div class="blog-header">
@@ -37,9 +27,6 @@
    <main role="main" class="container">
       <div class="row">
   <!--End of conatiner-->
-
-      <%= login_helper %>
-
         <%= yield %>
 
         <!--Side bar starat-->
