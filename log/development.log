@@ -15522,3 +15522,31 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 124ms (Views: 119.8ms | ActiveRecord: 2.1ms | Allocations: 8506)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2022-02-26 15:47:20 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (7.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 64.7ms | Allocations: 1668)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 86.8ms | Allocations: 2920)
+  Rendered shared/_blog_nav.html.erb (Duration: 6.2ms | Allocations: 774)
+  Rendered shared/_nav.html.erb (Duration: 6.0ms | Allocations: 441)
+  Rendered layout layouts/blog.html.erb (Duration: 181.2ms | Allocations: 10688)
+Completed 200 OK in 208ms (Views: 194.1ms | ActiveRecord: 7.4ms | Allocations: 11841)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-26 15:47:55 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 30.8ms | Allocations: 1667)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 53.2ms | Allocations: 2917)
+  Rendered shared/_blog_nav.html.erb (Duration: 6.6ms | Allocations: 774)
+  Rendered shared/_nav.html.erb (Duration: 7.3ms | Allocations: 441)
+  Rendered layout layouts/blog.html.erb (Duration: 119.6ms | Allocations: 10679)
+Completed 200 OK in 137ms (Views: 124.9ms | ActiveRecord: 2.2ms | Allocations: 11835)
+
+
