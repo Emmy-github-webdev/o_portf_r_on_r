@@ -14330,3 +14330,92 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 108ms (Views: 93.2ms | ActiveRecord: 1.1ms | Allocations: 12937)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-26 09:44:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 341)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 54.8ms | Allocations: 4315)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 152.0ms | Allocations: 21808)
+Completed 200 OK in 196ms (Views: 137.7ms | ActiveRecord: 20.1ms | Allocations: 28074)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-26 09:44:52 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (88.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 17.0ms | Allocations: 761)
+  Rendered blogs/_blog.html.erb (Duration: 2.3ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.4ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 2.1ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.8ms | Allocations: 122)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 259.2ms | Allocations: 10627)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered shared/_nav.html.erb (Duration: 4.6ms | Allocations: 455)
+  Rendered layout layouts/blog.html.erb (Duration: 318.7ms | Allocations: 18278)
+Completed 200 OK in 333ms (Views: 217.2ms | ActiveRecord: 112.5ms | Allocations: 19533)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-26 09:44:52 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:6
+  Rendered blogs/_blog.html.erb (Duration: 10.6ms | Allocations: 123)
+  Rendered blogs/_blog.html.erb (Duration: 2.2ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.6ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.9ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.7ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.5ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.0ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.1ms | Allocations: 122)
+  Rendered blogs/_blog.html.erb (Duration: 1.0ms | Allocations: 122)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 71.1ms | Allocations: 2935)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered shared/_nav.html.erb (Duration: 1.7ms | Allocations: 103)
+  Rendered layout layouts/blog.html.erb (Duration: 122.2ms | Allocations: 9227)
+Completed 200 OK in 131ms (Views: 126.2ms | ActiveRecord: 3.0ms | Allocations: 9556)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-26 09:45:12 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (45.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 138.2ms | Allocations: 8853)
+  Rendered shared/_nav.html.erb (Duration: 1.3ms | Allocations: 117)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered layout layouts/portfolio.html.erb (Duration: 223.4ms | Allocations: 16004)
+Completed 200 OK in 323ms (Views: 175.6ms | ActiveRecord: 56.4ms | Allocations: 19708)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-02-26 09:45:13 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 33.7ms | Allocations: 3341)
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 104)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered layout layouts/portfolio.html.erb (Duration: 104.2ms | Allocations: 9648)
+Completed 200 OK in 109ms (Views: 103.7ms | ActiveRecord: 2.7ms | Allocations: 9962)
+
+
