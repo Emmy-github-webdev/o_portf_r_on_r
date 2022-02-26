@@ -124,13 +124,3 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 > Deployment instructions
 
 
-<p style="color: green"><%= notice %></p>
-
-<h1>Blogs</h1>
-<%= link_to "New blog", new_blog_path %>
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-  <% end %>
-</div>
-
