@@ -3,7 +3,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
   layout 'blog'
-  # Add toggle_status to admin access link
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, portfolio_admin: :all
   
   # GET /blogs or /blogs.json
   def index
