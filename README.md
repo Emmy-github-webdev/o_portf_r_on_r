@@ -123,6 +123,8 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 ## Authorization using petergate gem
 > [Petergate Gem](https://github.com/elorest/petergate)
 
+## Font Awesome Rails
+[Font Awesome Rails](https://github.com/bokmann/font-awesome-rails)
 
 > Deployment instructions
 
