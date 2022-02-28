@@ -13,21 +13,17 @@
   </head>
 
   <body>
-  <%= render 'shared/blog_nav' %>
-
-  <!-- Header start-->
-  <div class="blog-header mb-4 mt-4">
-   <%= render 'shared/blog_masthead'%>
-  </div>
-   <main role="main" class="container">
+    <%= render 'shared/blog_nav' %>
+    <div class="blog-header mb-4 mt-4">
+    <%= render 'shared/blog_masthead'%>
+    </div>
+    <main role="main" class="container">
       <div class="row">
         <%= yield %>
         <%= render 'shared/blog_asidebar' %>
       </div>
-      <%= render 'shared/blog_footer'%>
-      <%= render 'shared/nav', location: 'bottom' %>
       <%= source_helper('blog') %>
-    </div>
-  </div>
+    </main>
+   <%= render 'shared/blog_footer'%>
   </body>
 </html>
