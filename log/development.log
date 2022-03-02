@@ -16554,3 +16554,355 @@ Processing by BlogsController#show as HTML
 Completed 200 OK in 203ms (Views: 136.3ms | ActiveRecord: 8.6ms | Allocations: 13299)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:13:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 116.1ms | Allocations: 2953)
+  [1m[36mBlog Count (57.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 378.6ms | Allocations: 14965)
+  Rendered layout layouts/blog.html.erb (Duration: 379.8ms | Allocations: 15077)
+Completed 500 Internal Server Error in 1054ms (ActiveRecord: 96.6ms | Allocations: 41895)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:13:46 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 28.6ms | Allocations: 1141)
+  [1m[36mBlog Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 78.9ms | Allocations: 5426)
+  Rendered layout layouts/blog.html.erb (Duration: 81.5ms | Allocations: 5521)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 4.0ms | Allocations: 7949)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:14:48 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 8.9ms | Allocations: 1141)
+  [1m[36mBlog Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:3
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 32.9ms | Allocations: 5419)
+  Rendered layout layouts/blog.html.erb (Duration: 34.5ms | Allocations: 5514)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 3.3ms | Allocations: 7845)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:3
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:15:21 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 11.1ms | Allocations: 1141)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 37.9ms | Allocations: 4737)
+  Rendered layout layouts/blog.html.erb (Duration: 39.2ms | Allocations: 4832)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 3.0ms | Allocations: 7166)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for nil:NilClass
+
+      options[:total_pages] ||= options[:num_pages] || scope.total_pages
+                                                            ^^^^^^^^^^^^):
+    1: <div class="col-md-8 blog-main">
+    2:   <%= render @blogs %>
+    3:  <%= paginate @blog %>
+    4: </div>
+  
+app/views/blogs/index.html.erb:3
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:25:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (36.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 20.9ms | Allocations: 2782)
+  [1m[36mBlog Count (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 133.2ms | Allocations: 14101)
+  Rendered layout layouts/blog.html.erb (Duration: 135.2ms | Allocations: 14213)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 66.3ms | Allocations: 41711)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 11:30:39 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 17.8ms | Allocations: 1181)
+  [1m[36mBlog Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 100.1ms | Allocations: 7119)
+  Rendered layout layouts/blog.html.erb (Duration: 104.1ms | Allocations: 7214)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 30.7ms | Allocations: 18111)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/" for 127.0.0.1 at 2022-02-28 13:44:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.7ms | Allocations: 683)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 146.2ms | Allocations: 14724)
+  Rendered shared/_application_footer.html.erb (Duration: 5.8ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 1083.1ms | Allocations: 85597)
+Completed 200 OK in 1299ms (Views: 1077.9ms | ActiveRecord: 15.5ms | Allocations: 99114)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 13:44:28 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 30.6ms | Allocations: 2708)
+  [1m[36mBlog Count (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 104.2ms | Allocations: 13788)
+  Rendered layout layouts/blog.html.erb (Duration: 106.1ms | Allocations: 13895)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 19.5ms | Allocations: 17328)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 13:53:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 26.7ms | Allocations: 2782)
+  [1m[36mBlog Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 127.4ms | Allocations: 14671)
+  Rendered layout layouts/blog.html.erb (Duration: 128.4ms | Allocations: 14783)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 35.7ms | Allocations: 41625)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 13:55:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 25.7ms | Allocations: 20142)
+
+
+  
+ArgumentError (Support for calling #default_scope without a block is removed. For example instead of `default_scope where(color: 'red')`, please use `default_scope { where(color: 'red') }`. (Alternatively you can just redefine self.default_scope.)):
+  
+app/models/blog.rb:4:in `<class:Blog>'
+app/models/blog.rb:3:in `<main>'
+app/controllers/blogs_controller.rb:10:in `index'
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 13:56:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 23.0ms | Allocations: 20142)
+
+
+  
+ArgumentError (Support for calling #default_scope without a block is removed. For example instead of `default_scope where(color: 'red')`, please use `default_scope { where(color: 'red') }`. (Alternatively you can just redefine self.default_scope.)):
+  
+app/models/blog.rb:4:in `<class:Blog>'
+app/models/blog.rb:3:in `<main>'
+app/controllers/blogs_controller.rb:10:in `index'
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 13:58:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+Completed 400 Bad Request in 172ms (ActiveRecord: 23.1ms | Allocations: 23730)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: blog):
+  
+app/controllers/blogs_controller.rb:84:in `blog_params'
+app/controllers/blogs_controller.rb:10:in `index'
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 14:53:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" ORDER BY "blogs"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [5 times] (Duration: 16.3ms | Allocations: 2782)
+  [1m[36mBlog Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:4
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 67.8ms | Allocations: 14101)
+  Rendered layout layouts/blog.html.erb (Duration: 69.4ms | Allocations: 14213)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 27.2ms | Allocations: 41732)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    11:     <%= first_page_tag unless current_page.first? %>
+    12:     <%= prev_page_tag unless current_page.first? %>
+    13:     <% each_page do |page| -%>
+    14:       <% if page.left_outer? || page.right_outer? || page.inside_window? -%>
+    15:         <%= page_tag page %>
+    16:       <% elsif !page.was_truncated? -%>
+    17:         <%= gap_tag %>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 14:53:44 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 54.6ms | Allocations: 1490)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 138.0ms | Allocations: 9779)
+  Rendered layout layouts/blog.html.erb (Duration: 143.9ms | Allocations: 9874)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 40.0ms | Allocations: 19642)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<ActiveRecord::Relation [#<Blog id: 4, title: "My blog title 3", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:26.892727000 +0000", updated_at: "2022-02-19 21:00:26.892727000 +0000", slug: "my-blog-title-3", status: "draft", topic_id: 3>, #<Blog id: 5, title: "My blog title 4", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:26.933948000 +0000", updated_at: "2022-02-19 21:00:26.933948000 +0000", slug: "my-blog-title-4", status: "draft", topic_id: 3>, #<Blog id: 6, title: "My blog title 5", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:26.974230000 +0000", updated_at: "2022-02-19 21:00:26.974230000 +0000", slug: "my-blog-title-5", status: "draft", topic_id: 3>, #<Blog id: 7, title: "My blog title 6", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:27.014148000 +0000", updated_at: "2022-02-19 21:00:27.014148000 +0000", slug: "my-blog-title-6", status: "draft", topic_id: 3>, #<Blog id: 8, title: "My blog title 7", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:27.054375000 +0000", updated_at: "2022-02-19 21:00:27.054375000 +0000", slug: "my-blog-title-7", status: "draft", topic_id: 3>, #<Blog id: 3, title: "My blog title 2", body: "Sed ut perspiciatis unde omnis iste natus error. G...", created_at: "2022-02-19 21:00:26.842189000 +0000", updated_at: "2022-02-26 22:45:26.424472000 +0000", slug: "my-blog-title-2", status: "draft", topic_id: 3>, #<Blog id: 2, title: "My blog title 1", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:26.802129000 +0000", updated_at: "2022-02-28 07:52:08.671335000 +0000", slug: "my-blog-title-1", status: "draft", topic_id: 3>, #<Blog id: 9, title: "My blog title 8", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:27.093586000 +0000", updated_at: "2022-02-19 21:00:27.093586000 +0000", slug: "my-blog-title-8", status: "draft", topic_id: 3>, #<Blog id: 10, title: "My blog title 9", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:27.134956000 +0000", updated_at: "2022-02-19 21:00:27.134956000 +0000", slug: "my-blog-title-9", status: "draft", topic_id: 3>, #<Blog id: 1, title: "My blog title 0", body: "Sed ut perspiciatis unde omnis iste natus error si...", created_at: "2022-02-19 21:00:26.735988000 +0000", updated_at: "2022-02-26 22:42:35.688763000 +0000", slug: "my-blog-title-0", status: "published", topic_id: 3>]>):
+    1: <div class="col-md-8 blog-main">
+    2:   <%= render @blogs %>
+    3:   <nav class="blog-pagination">
+    4:     <%= paginate @blogs %>
+    5:   </nav>
+    6: </div>
+  
+app/views/blogs/index.html.erb:4
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 14:54:03 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 21.1ms | Allocations: 1794)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 40.0ms | Allocations: 3037)
+  Rendered layout layouts/blog.html.erb (Duration: 493.1ms | Allocations: 57410)
+Completed 200 OK in 525ms (Views: 497.1ms | ActiveRecord: 3.2ms | Allocations: 59804)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-02-28 14:54:38 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:3:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 21.2ms | Allocations: 1788)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 36.9ms | Allocations: 3034)
+  Rendered layout layouts/blog.html.erb (Duration: 103.3ms | Allocations: 12203)
+Completed 200 OK in 129ms (Views: 108.7ms | ActiveRecord: 4.6ms | Allocations: 14595)
+
+

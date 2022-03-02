@@ -20,7 +20,7 @@ application up and running.
 > Configuration
 
 > Create Rails Application
-- rails new myappname -T database=postgresql
+- rails new myapp --database=postgresql
 
 > Database creation
 - After creating the Rails application,
@@ -123,8 +123,12 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 ## Authorization using petergate gem
 > [Petergate Gem](https://github.com/elorest/petergate)
 
-## Font Awesome Rails
+## Font Awesome Rails Gem
 [Font Awesome Rails](https://github.com/bokmann/font-awesome-rails)
+
+## Kaminari Gem
+[Kaminari](https://github.com/kaminari/kaminari)
+- Used for pagination
 
 > Deployment instructions
 
