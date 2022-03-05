@@ -15,7 +15,7 @@
   <body>
     <%= render 'shared/portfolio_nav' %>
     <main role="main">
-      <%= render 'shared/portfolio_masthead' %>
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:portfolio_admin) %>
       <%= yield %>
     </main>
    <%= source_helper('application') %>
