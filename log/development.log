@@ -18996,3 +18996,263 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 133ms (Views: 119.6ms | ActiveRecord: 2.8ms | Allocations: 8759)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:44:42 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 17.1ms | Allocations: 974)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 477.3ms | Allocations: 4925)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 9.1ms | Allocations: 884)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 3.6ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.4ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 575.9ms | Allocations: 12791)
+Completed 200 OK in 596ms (Views: 589.4ms | ActiveRecord: 35.6ms | Allocations: 14386)
+
+
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-05 10:44:48 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (7.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 3]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 20.4ms | Allocations: 1229)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.7ms | Allocations: 458)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 75.7ms | Allocations: 7367)
+Completed 200 OK in 103ms (Views: 77.4ms | ActiveRecord: 11.1ms | Allocations: 8844)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:45:10 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 24.4ms | Allocations: 622)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 37.1ms | Allocations: 1715)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.4ms | Allocations: 426)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 106.4ms | Allocations: 7821)
+Completed 200 OK in 115ms (Views: 108.5ms | ActiveRecord: 1.4ms | Allocations: 8575)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:45:14 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (3.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 10.4ms | Allocations: 794)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.4ms | Allocations: 458)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 53.5ms | Allocations: 6932)
+Completed 200 OK in 76ms (Views: 54.3ms | ActiveRecord: 5.5ms | Allocations: 8204)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:45:57 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (2.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (2.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 24.2ms | Allocations: 1463)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.2ms | Allocations: 937)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.2ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.8ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 93.2ms | Allocations: 9384)
+Completed 200 OK in 120ms (Views: 98.6ms | ActiveRecord: 5.1ms | Allocations: 11459)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:46:36 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (8.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 28.4ms | Allocations: 1463)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 9.5ms | Allocations: 942)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 3.0ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.3ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 146.6ms | Allocations: 9413)
+Completed 200 OK in 197ms (Views: 157.0ms | ActiveRecord: 9.4ms | Allocations: 11587)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:47:05 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 15.9ms | Allocations: 1460)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.4ms | Allocations: 937)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.5ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.3ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 93.5ms | Allocations: 9381)
+Completed 200 OK in 113ms (Views: 100.1ms | ActiveRecord: 2.5ms | Allocations: 11568)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:47:31 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (12.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:12
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 23.6ms | Allocations: 1459)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 10.2ms | Allocations: 937)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 5.9ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.4ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 104.0ms | Allocations: 9402)
+Completed 200 OK in 142ms (Views: 98.4ms | ActiveRecord: 14.2ms | Allocations: 11577)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:49:35 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 23.9ms | Allocations: 1468)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 10.3ms | Allocations: 937)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.7ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 4.7ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 112.1ms | Allocations: 9389)
+Completed 200 OK in 148ms (Views: 123.0ms | ActiveRecord: 2.9ms | Allocations: 11558)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-05 10:51:52 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (2.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (2.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 17.5ms | Allocations: 1471)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 8.3ms | Allocations: 937)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 4.2ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.7ms | Allocations: 197)
+  Rendered layout layouts/portfolio.html.erb (Duration: 102.5ms | Allocations: 9391)
+Completed 200 OK in 144ms (Views: 116.6ms | ActiveRecord: 4.9ms | Allocations: 11563)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:52:04 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 14.3ms | Allocations: 922)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 38.5ms | Allocations: 2329)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.9ms | Allocations: 426)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 103.9ms | Allocations: 8435)
+Completed 200 OK in 127ms (Views: 111.3ms | ActiveRecord: 2.1ms | Allocations: 9326)
+
+
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-05 10:52:08 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (3.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 3]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 21.8ms | Allocations: 741)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.6ms | Allocations: 458)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 90.6ms | Allocations: 6879)
+Completed 200 OK in 129ms (Views: 89.5ms | ActiveRecord: 5.1ms | Allocations: 8175)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:52:23 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 11.0ms | Allocations: 622)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 33.3ms | Allocations: 1715)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.4ms | Allocations: 426)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/portfolio.html.erb (Duration: 98.8ms | Allocations: 7821)
+Completed 200 OK in 120ms (Views: 99.9ms | ActiveRecord: 1.9ms | Allocations: 8598)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:56:35 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 15.2ms | Allocations: 974)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 44.5ms | Allocations: 2513)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 10.0ms | Allocations: 884)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 4.3ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 3.9ms | Allocations: 255)
+  Rendered layout layouts/portfolio.html.erb (Duration: 125.2ms | Allocations: 10437)
+Completed 200 OK in 163ms (Views: 143.8ms | ActiveRecord: 2.3ms | Allocations: 12020)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-05 10:57:00 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:5
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 13.4ms | Allocations: 975)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 28.0ms | Allocations: 2514)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.6ms | Allocations: 884)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.6ms | Allocations: 308)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.6ms | Allocations: 252)
+  Rendered layout layouts/portfolio.html.erb (Duration: 81.1ms | Allocations: 10435)
+Completed 200 OK in 93ms (Views: 84.6ms | ActiveRecord: 1.3ms | Allocations: 12095)
+
+
+Started GET "/portfolio/9" for 127.0.0.1 at 2022-03-05 10:57:05 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:75:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 9]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 20.8ms | Allocations: 1216)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.8ms | Allocations: 467)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 76.3ms | Allocations: 7381)
+Completed 200 OK in 105ms (Views: 76.5ms | ActiveRecord: 3.0ms | Allocations: 8831)
+
+
