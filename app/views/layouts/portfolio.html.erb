@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title><%= @page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="<%= @seo_keywords %>">
@@ -12,17 +13,12 @@
   </head>
 
   <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
-
-
-   <%= render 'shared/nav', location: 'top' %>
-
-   <%= login_helper %>
-
-    <%= yield %>
-
-    <%= source_helper('application') %>
-
+    <%= render 'shared/portfolio_nav' %>
+    <main role="main">
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:portfolio_admin) %>
+      <%= yield %>
+    </main>
+   <%= source_helper('application') %>
+   <%= render 'shared/portfolio_footer' %>
   </body>
 </html>

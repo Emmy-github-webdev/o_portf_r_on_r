@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="col-md-8 blog-main">
+ <h1> <%= @blog.title %></h1>
+ <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</p>
+ <p > </p>
+  <p class="mb-4"><%= @blog.body %></p>
+ 
+  
+  <p class="blog-post-meta">
+   <%= link_to "Back to blogs", blogs_path %> 
+  <% if logged_in?(:portfolio_admin) %>
+    | <%= link_to "Edit this blog", edit_blog_path(@blog) %>  | 
+    <%= link_to @blog.status, toggle_status_blog_path(@blog) %>
+    <%= button_to "Destroy this blog", @blog, method: :delete, class: 'btn btn-danger' %> 
 
-<%= render @blog %>
-
-<div>
-  <%= link_to "Edit this blog", edit_blog_path(@blog) if logged_in?(:portfolio_admin) %> |
-  <%= link_to "Back to blogs", blogs_path %>
-
-  <%= button_to "Destroy this blog", @blog, method: :delete if logged_in?(:portfolio_admin) %>
+  <% end %>
+  </p>
 </div>
+
+
