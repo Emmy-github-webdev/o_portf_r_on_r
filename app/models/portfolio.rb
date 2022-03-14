@@ -12,6 +12,11 @@ accepts_nested_attributes_for :technologies,
   def self.reactjs
     where(subtitle: 'ReactJS')
   end
+
+  def self.by_position
+    order("position ASC")    
+  end
+  
   #initialize scope method 2
   scope :ruby_on_rails, -> {where(subtitle: 'Ruby on Rails')}
 

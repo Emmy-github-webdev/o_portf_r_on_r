@@ -20673,3 +20673,54 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 285ms (Views: 159.4ms | ActiveRecord: 9.0ms | Allocations: 33239)
 
 
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Update (9.5ms)[0m  [1m[33mUPDATE "portfolios" SET "updated_at" = $1, "position" = $2 WHERE "portfolios"."id" = $3[0m  [["updated_at", "2022-03-14 08:03:03.905331"], ["position", 1], ["id", 13]]
+  [1m[36mTRANSACTION (87.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Update (1.0ms)[0m  [1m[33mUPDATE "portfolios" SET "updated_at" = $1, "position" = $2 WHERE "portfolios"."id" = $3[0m  [["updated_at", "2022-03-14 08:03:35.822456"], ["position", 2], ["id", 1]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 09:03:43 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 4.9ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 20.1ms | Allocations: 1835)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.5ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.8ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 69.0ms | Allocations: 7970)
+Completed 200 OK in 176ms (Views: 68.6ms | ActiveRecord: 26.0ms | Allocations: 11098)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 09:07:18 +0100
+Processing by PortfoliosController#index as HTML
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 22.8ms | Allocations: 8604)
+
+
+  
+SyntaxError (/home/emmy/Desktop/the_odin_project/o_portf_r_on_r/app/models/portfolio.rb:33: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/portfolio.rb:33: syntax error, unexpected `end', expecting end-of-input
+app/models/portfolio.rb:33: syntax error, unexpected `end', expecting end-of-input
+app/models/portfolio.rb:33: syntax error, unexpected `end', expecting end-of-input
+app/controllers/portfolios_controller.rb:9:in `index'
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 09:08:01 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 8.6ms | Allocations: 705)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 53.0ms | Allocations: 5528)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.1ms | Allocations: 281)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.5ms | Allocations: 64)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered layout layouts/portfolio.html.erb (Duration: 144.5ms | Allocations: 24763)
+Completed 200 OK in 252ms (Views: 137.9ms | ActiveRecord: 23.9ms | Allocations: 35702)
+
+
