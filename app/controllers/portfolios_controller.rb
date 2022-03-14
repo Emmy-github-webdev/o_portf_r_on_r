@@ -6,7 +6,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :reactjs], user: {except: [:destroy, :new, :create, :update, :edit]}, portfolio_admin: :all
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.order("position ASC")
   end
   
 def reactjs
