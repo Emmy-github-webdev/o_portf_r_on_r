@@ -110,6 +110,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -243,6 +245,7 @@ DEPENDENCIES
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
+  jquery-ui-rails (~> 6.0, >= 6.0.1)
   kaminari (~> 1.2, >= 1.2.2)
   petergate (~> 3.0)
   pg (~> 1.1)

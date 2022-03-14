@@ -130,6 +130,19 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 [Kaminari](https://github.com/kaminari/kaminari)
 - Used for pagination
 
+> Add Javascript To Rails 7
+- Go to config/importmap.rb and add the following: pin_all_from "app/javascript/custom", under: "custom"
+- Go to app/javascript/application.js file and add the following: import "custom/main"
+- In 'app/javascript' directory, add 'custom' folder.
+- In 'app/javascript/custom' directory add your custom js file 'main.js'.
+- Run In your terminal: rails assets:precompile
+- Start your rails server.
+> jquery-ui-rails
+- Add jquery-ui-rails to gemfile
+- bundle install
+- Add require jquery-ui to application.js
+- Add @import "jquery-ui-rails" to application.css
+
 > Deployment instructions
 
 
