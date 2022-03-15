@@ -69,7 +69,7 @@ Run the application and confirm the database setup is working without error
 > [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on)
 - Add tags to post
 > Authentication
-- [Devise](https://rubygems.org/search?query=devise)
+- [Devise](https://rubygems.org/search?query=devise), (https://hackernoon.com/using-devise-in-your-ruby-on-rails-application-a-step-by-step-guide-m92i3y5s), (https://github.com/heartcombo/devise#getting-started)
 - Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
 - Run bundle install
 - [Install device generator](https://github.com/heartcombo/devise) $ rails generate devise:install
@@ -142,6 +142,21 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 - bundle install
 - Add require jquery-ui to application.js
 - Add @import "jquery-ui-rails" to application.css
+
+> Rubocop Error
+- Metrics/CyclomaticComplexity: Cyclomatic complexity for cli_arg_version is too high. [9/7]
+  def cli_arg_version ..
+- Solution -
+# rubocop:disable Metrics/CyclomaticComplexity
+.... your method here
+# rubocop:enable Metrics/CyclomaticComplexity
+
+- Metrics/PerceivedComplexity: Perceived complexity for cli_arg_version is too high. [9/8]
+  def cli_arg_version 
+
+  # rubocop:disable Metrics/PerceivedComplexity
+.... your method here
+# rubocop:enable Metrics/PerceivedComplexity
 
 > Deployment instructions
 

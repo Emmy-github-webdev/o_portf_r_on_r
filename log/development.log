@@ -20962,3 +20962,679 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 372ms (Views: 137.5ms | ActiveRecord: 30.8ms | Allocations: 40196)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 11:24:50 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (7.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 17.3ms | Allocations: 976)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 46.4ms | Allocations: 2635)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 10.4ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 4.4ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.4ms | Allocations: 249)
+  Rendered layout layouts/portfolio.html.erb (Duration: 83.3ms | Allocations: 5320)
+Completed 200 OK in 225ms (Views: 89.0ms | ActiveRecord: 44.8ms | Allocations: 9357)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 11:54:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 15.3ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 82.3ms | Allocations: 10295)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 6.2ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.5ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 4.1ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 128.6ms | Allocations: 15382)
+Completed 200 OK in 369ms (Views: 130.5ms | ActiveRecord: 32.9ms | Allocations: 42405)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:04:15 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 9.4ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 22.3ms | Allocations: 1923)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.9ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 36.0ms | Allocations: 3082)
+Completed 200 OK in 164ms (Views: 35.2ms | ActiveRecord: 30.7ms | Allocations: 6330)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:16:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (5.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 11.0ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 120.6ms | Allocations: 10186)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 8.3ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 4.3ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.5ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 178.8ms | Allocations: 15273)
+Completed 200 OK in 436ms (Views: 171.1ms | ActiveRecord: 41.7ms | Allocations: 40184)
+
+
+Started GET "/portfolio/13" for 127.0.0.1 at 2022-03-14 12:17:22 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:76:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (96.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 371.8ms | Allocations: 13931)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.3ms | Allocations: 297)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 391.0ms | Allocations: 15179)
+Completed 200 OK in 516ms (Views: 286.7ms | ActiveRecord: 110.1ms | Allocations: 24756)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:17:31 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 9.3ms | Allocations: 634)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 32.4ms | Allocations: 1806)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.3ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.5ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 55.5ms | Allocations: 2926)
+Completed 200 OK in 77ms (Views: 56.4ms | ActiveRecord: 1.5ms | Allocations: 3833)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:20:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 8.9ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 100.7ms | Allocations: 10190)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.6ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 3.7ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.2ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 136.5ms | Allocations: 15349)
+Completed 200 OK in 369ms (Views: 130.4ms | ActiveRecord: 43.0ms | Allocations: 40275)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:22:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 5.2ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 74.1ms | Allocations: 10190)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.9ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.1ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.8ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 110.2ms | Allocations: 15349)
+Completed 200 OK in 319ms (Views: 114.4ms | ActiveRecord: 30.4ms | Allocations: 40269)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:22:13 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 3.4ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 9.8ms | Allocations: 1834)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.1ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 3.0ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 26.5ms | Allocations: 2994)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 1.1ms | Allocations: 4045)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:38:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 9.2ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 86.0ms | Allocations: 10186)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.6ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 5.5ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 3.0ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 129.5ms | Allocations: 15345)
+Completed 200 OK in 285ms (Views: 125.0ms | ActiveRecord: 27.3ms | Allocations: 40356)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:38:17 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 10.6ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 42.9ms | Allocations: 1834)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.2ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 81.6ms | Allocations: 2994)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 1.7ms | Allocations: 4039)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:49:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 8.9ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 87.7ms | Allocations: 10190)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.3ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.5ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.7ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 136.4ms | Allocations: 15349)
+Completed 200 OK in 336ms (Views: 131.5ms | ActiveRecord: 35.4ms | Allocations: 40278)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:49:10 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 9.8ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 25.0ms | Allocations: 1834)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.6ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.8ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 46.1ms | Allocations: 2994)
+Completed 200 OK in 62ms (Views: 48.2ms | ActiveRecord: 1.8ms | Allocations: 4054)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:50:30 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 16.8ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 38.5ms | Allocations: 1727)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.9ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 49.3ms | Allocations: 2846)
+Completed 200 OK in 67ms (Views: 49.5ms | ActiveRecord: 2.4ms | Allocations: 3640)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:50:32 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 6.6ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 24.0ms | Allocations: 1720)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.7ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.9ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.6ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 45.3ms | Allocations: 2838)
+Completed 200 OK in 58ms (Views: 45.4ms | ActiveRecord: 2.1ms | Allocations: 3626)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:51:18 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (5.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 16.7ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 33.3ms | Allocations: 1720)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.7ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.5ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.8ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 49.9ms | Allocations: 2838)
+Completed 200 OK in 57ms (Views: 46.8ms | ActiveRecord: 5.3ms | Allocations: 3608)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:51:19 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 3.9ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 29.7ms | Allocations: 1727)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.1ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 1.2ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 46.5ms | Allocations: 2846)
+Completed 200 OK in 62ms (Views: 45.7ms | ActiveRecord: 2.5ms | Allocations: 3635)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:53:22 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 19.8ms | Allocations: 977)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 56.3ms | Allocations: 2522)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.4ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 10.1ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.1ms | Allocations: 249)
+  Rendered layout layouts/portfolio.html.erb (Duration: 124.3ms | Allocations: 5207)
+Completed 200 OK in 147ms (Views: 135.8ms | ActiveRecord: 3.5ms | Allocations: 6839)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:53:23 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (7.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 14.9ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 28.4ms | Allocations: 1720)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 6.7ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 54.7ms | Allocations: 2838)
+Completed 200 OK in 89ms (Views: 59.5ms | ActiveRecord: 7.5ms | Allocations: 3787)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:54:31 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 10.9ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 24.9ms | Allocations: 1720)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.0ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 1.2ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.6ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 48.4ms | Allocations: 2838)
+Completed 200 OK in 69ms (Views: 51.5ms | ActiveRecord: 1.3ms | Allocations: 3617)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 12:54:32 +0100
+Processing by PortfoliosController#index as */*
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 12.2ms | Allocations: 623)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 31.5ms | Allocations: 1720)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.2ms | Allocations: 244)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 48.2ms | Allocations: 2838)
+Completed 200 OK in 63ms (Views: 47.4ms | ActiveRecord: 3.3ms | Allocations: 3611)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 13:40:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 10.1ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 72.8ms | Allocations: 10190)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.1ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.6ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.8ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 103.1ms | Allocations: 15425)
+Completed 200 OK in 307ms (Views: 103.0ms | ActiveRecord: 27.0ms | Allocations: 40333)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 13:42:14 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (8.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 7.1ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 28.8ms | Allocations: 1826)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.3ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 1.1ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 49.4ms | Allocations: 5267)
+Completed 200 OK in 63ms (Views: 44.2ms | ActiveRecord: 8.9ms | Allocations: 6211)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 13:43:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (8.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 24.3ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 128.3ms | Allocations: 10190)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 12.0ms | Allocations: 573)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 6.7ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.7ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 195.6ms | Allocations: 15431)
+Completed 200 OK in 470ms (Views: 188.4ms | ActiveRecord: 46.7ms | Allocations: 40348)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:16:38 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 5.6ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 21.7ms | Allocations: 1928)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.8ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.9ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.5ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 50.1ms | Allocations: 5368)
+Completed 200 OK in 181ms (Views: 49.0ms | ActiveRecord: 32.5ms | Allocations: 8604)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:17:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 7.8ms | Allocations: 1116)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 93.9ms | Allocations: 10186)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.5ms | Allocations: 572)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.3ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.6ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 134.9ms | Allocations: 15421)
+Completed 200 OK in 358ms (Views: 130.4ms | ActiveRecord: 36.5ms | Allocations: 40354)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:19:04 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 11.0ms | Allocations: 657)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 30.1ms | Allocations: 1834)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.5ms | Allocations: 250)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.7ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 51.6ms | Allocations: 2992)
+Completed 200 OK in 64ms (Views: 51.9ms | ActiveRecord: 2.2ms | Allocations: 3962)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2022-03-14 14:19:53 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:76:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (2.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 90.1ms | Allocations: 7643)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.6ms | Allocations: 294)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 1.3ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.8ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 110.8ms | Allocations: 8875)
+Completed 200 OK in 210ms (Views: 103.3ms | ActiveRecord: 15.1ms | Allocations: 18129)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:45:07 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 10.8ms | Allocations: 1007)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 43.4ms | Allocations: 2672)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.1ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 3.2ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 3.1ms | Allocations: 249)
+  Rendered layout layouts/portfolio.html.erb (Duration: 70.3ms | Allocations: 5358)
+Completed 200 OK in 212ms (Views: 74.6ms | ActiveRecord: 35.7ms | Allocations: 9363)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:47:06 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 7.9ms | Allocations: 1005)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 20.8ms | Allocations: 2549)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.7ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.6ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.2ms | Allocations: 249)
+  Rendered layout layouts/portfolio.html.erb (Duration: 50.6ms | Allocations: 5234)
+Completed 200 OK in 72ms (Views: 63.3ms | ActiveRecord: 1.9ms | Allocations: 6924)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-14 14:49:20 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [13 times] (Duration: 27.8ms | Allocations: 1003)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 57.5ms | Allocations: 2547)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.8ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.5ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.8ms | Allocations: 249)
+  Rendered layout layouts/portfolio.html.erb (Duration: 89.7ms | Allocations: 5232)
+Completed 200 OK in 124ms (Views: 95.8ms | ActiveRecord: 3.9ms | Allocations: 6925)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-03-14 14:53:22 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (74.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 257.0ms | Allocations: 6521)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 417.5ms | Allocations: 12686)
+  Rendered shared/_blog_nav.html.erb (Duration: 22.9ms | Allocations: 506)
+  Rendered shared/_blog_masthead.html.erb (Duration: 15.4ms | Allocations: 321)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.3ms | Allocations: 937)
+  Rendered shared/_blog_footer.html.erb (Duration: 5.4ms | Allocations: 193)
+  Rendered layout layouts/blog.html.erb (Duration: 493.0ms | Allocations: 16303)
+Completed 200 OK in 633ms (Views: 397.6ms | ActiveRecord: 103.2ms | Allocations: 22731)
+
+
+Started GET "/blogs/my-blog-title-3" for 127.0.0.1 at 2022-03-14 14:53:30 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-title-3"}
+  [1m[36mBlog Load (22.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-3"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:79:in `set_blog'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (Duration: 51.0ms | Allocations: 2398)
+  Rendered layout layouts/blog.html.erb (Duration: 52.8ms | Allocations: 2498)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 23.3ms | Allocations: 4501)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="col-md-8 blog-main">
+ <h1> <%= @blog.title %></h1>
+ <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</p>
+ <p > </p>
+  <p class="mb-4"><%= @blog.body %></p>
+ 
+  
+  <p class="blog-post-meta">
+   <%= link_to "Back to blogs", blogs_path %> 
+  <% if logged_in?(:portfolio_admin) %>
+    | <%= link_to "Edit this blog", edit_blog_path(@blog) %>  | 
+    <%= link_to @blog.status, toggle_status_blog_path(@blog) %>
+    <%= if can :delete, @blog %>
+    <%= button_to "Destroy this blog", @blog, method: :delete, class: 'btn btn-danger'%>
+    <% end %> 
+
+  <% end %>
+  </p>
+</div>
+
+
+
+):
+1:    <div class="col-md-8 blog-main">
+2:     <h1> <%= @blog.title %></h1>
+3:     <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</p>
+4:     <p > </p>
+5:      <p class="mb-4"><%= @blog.body %></p>
+6:     
+7:      
+8:      <p class="blog-post-meta">
+9:       <%= link_to "Back to blogs", blogs_path %> 
+10:      <% if logged_in?(:portfolio_admin) %>
+11:        | <%= link_to "Edit this blog", edit_blog_path(@blog) %>  | 
+12:        <%= link_to @blog.status, toggle_status_blog_path(@blog) %>
+13:        <%= if can :delete, @blog %>
+14:        <%= button_to "Destroy this blog", @blog, method: :delete, class: 'btn btn-danger'%>
+15:        <% end %> 
+16:    
+17:      <% end %>
+18:      </p>
+19:    </div>
+  
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:24: syntax error, unexpected `end', expecting ')'
+Started GET "/blogs/my-blog-title-3" for 127.0.0.1 at 2022-03-14 15:00:58 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-title-3"}
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-3"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:79:in `set_blog'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (Duration: 4.5ms | Allocations: 1315)
+  Rendered layout layouts/blog.html.erb (Duration: 5.7ms | Allocations: 1410)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 24.9ms | Allocations: 6417)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="col-md-8 blog-main">
+ <h1> <%= @blog.title %></h1>
+ <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</p>
+ <p > </p>
+  <p class="mb-4"><%= @blog.body %></p>
+ 
+  
+  <p class="blog-post-meta">
+   <%= link_to "Back to blogs", blogs_path %> 
+  <% if logged_in?(:portfolio_admin) %>
+    | <%= link_to "Edit this blog", edit_blog_path(@blog) %>  | 
+    <%= link_to @blog.status, toggle_status_blog_path(@blog) %>
+    <%= button_to "Destroy this blog", @blog, method: :delete, data-id="<% portfolio_item.id%>", class: 'btn btn-danger'%>
+
+  <% end %>
+  </p>
+</div>
+
+
+
+):
+1:    <div class="col-md-8 blog-main">
+2:     <h1> <%= @blog.title %></h1>
+3:     <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</p>
+4:     <p > </p>
+5:      <p class="mb-4"><%= @blog.body %></p>
+6:     
+7:      
+8:      <p class="blog-post-meta">
+9:       <%= link_to "Back to blogs", blogs_path %> 
+10:      <% if logged_in?(:portfolio_admin) %>
+11:        | <%= link_to "Edit this blog", edit_blog_path(@blog) %>  | 
+12:        <%= link_to @blog.status, toggle_status_blog_path(@blog) %>
+13:        <%= button_to "Destroy this blog", @blog, method: :delete, data-id="<% portfolio_item.id%>", class: 'btn btn-danger'%>
+14:    
+15:      <% end %>
+16:      </p>
+17:    </div>
+  
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:13: syntax error, unexpected ',', expecting =>
+app/views/blogs/show.html.erb:15: syntax error, unexpected `end', expecting ')'
+app/views/blogs/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+Started GET "/blogs/my-blog-title-3" for 127.0.0.1 at 2022-03-14 15:01:39 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-title-3"}
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-3"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:79:in `set_blog'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (Duration: 16.4ms | Allocations: 844)
+  Rendered shared/_blog_nav.html.erb (Duration: 3.6ms | Allocations: 501)
+  Rendered shared/_blog_masthead.html.erb (Duration: 2.4ms | Allocations: 320)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.7ms | Allocations: 896)
+  Rendered shared/_blog_footer.html.erb (Duration: 1.5ms | Allocations: 191)
+  Rendered layout layouts/blog.html.erb (Duration: 67.7ms | Allocations: 4387)
+Completed 200 OK in 113ms (Views: 86.2ms | ActiveRecord: 1.8ms | Allocations: 6952)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-03-14 15:02:14 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 37.6ms | Allocations: 2464)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 49.2ms | Allocations: 3652)
+  Rendered shared/_blog_nav.html.erb (Duration: 2.9ms | Allocations: 244)
+  Rendered shared/_blog_masthead.html.erb (Duration: 1.5ms | Allocations: 123)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 1.4ms | Allocations: 219)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/blog.html.erb (Duration: 72.2ms | Allocations: 4989)
+Completed 200 OK in 94ms (Views: 72.5ms | ActiveRecord: 1.6ms | Allocations: 5917)
+
+
