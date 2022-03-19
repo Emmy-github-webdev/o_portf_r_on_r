@@ -69,7 +69,7 @@ Run the application and confirm the database setup is working without error
 > [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on)
 - Add tags to post
 > Authentication
-- [Devise](https://rubygems.org/search?query=devise)
+- [Devise](https://rubygems.org/search?query=devise), (https://hackernoon.com/using-devise-in-your-ruby-on-rails-application-a-step-by-step-guide-m92i3y5s), (https://github.com/heartcombo/devise#getting-started)
 - Add gem 'devise', '~> 4.8', '>= 4.8.1' to the gemfile
 - Run bundle install
 - [Install device generator](https://github.com/heartcombo/devise) $ rails generate devise:install
@@ -126,9 +126,39 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 ## Font Awesome Rails Gem
 [Font Awesome Rails](https://github.com/bokmann/font-awesome-rails)
 
+
+
 ## Kaminari Gem
 [Kaminari](https://github.com/kaminari/kaminari)
 - Used for pagination
+
+> Add Javascript To Rails 7
+- Go to config/importmap.rb and add the following: pin_all_from "app/javascript/custom", under: "custom"
+- Go to app/javascript/application.js file and add the following: import "custom/main"
+- In 'app/javascript' directory, add 'custom' folder.
+- In 'app/javascript/custom' directory add your custom js file 'main.js'.
+- Run In your terminal: rails assets:precompile
+- Start your rails server.
+> jquery-ui-rails
+- Add jquery-ui-rails to gemfile
+- bundle install
+- Add require jquery-ui to application.js
+- Add @import "jquery-ui-rails" to application.css
+
+> Rubocop Error
+- Metrics/CyclomaticComplexity: Cyclomatic complexity for cli_arg_version is too high. [9/7]
+  def cli_arg_version ..
+- Solution -
+# rubocop:disable Metrics/CyclomaticComplexity
+.... your method here
+# rubocop:enable Metrics/CyclomaticComplexity
+
+- Metrics/PerceivedComplexity: Perceived complexity for cli_arg_version is too high. [9/8]
+  def cli_arg_version 
+
+  # rubocop:disable Metrics/PerceivedComplexity
+.... your method here
+# rubocop:enable Metrics/PerceivedComplexity
 
 > Deployment instructions
 
