@@ -22181,3 +22181,19 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 399ms (Views: 133.9ms | ActiveRecord: 34.7ms | Allocations: 40139)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-19 13:37:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 10.2ms | Allocations: 1018)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 72.9ms | Allocations: 10008)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.4ms | Allocations: 568)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.3ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.7ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 105.1ms | Allocations: 15231)
+Completed 200 OK in 288ms (Views: 108.1ms | ActiveRecord: 27.3ms | Allocations: 40137)
+
+
