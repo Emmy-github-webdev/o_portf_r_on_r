@@ -1,17 +1,26 @@
 # frozen_string_literal: true
 
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: %i[edit update show destroy]
   layout 'portfolio'
-  access all: [:show, :index, :reactjs], user: {except: [:destroy, :new, :create, :update, :edit]}, portfolio_admin: :all
+  access all: %i[show index reactjs], user: { except: %i[destroy new create update edit] },
+         portfolio_admin: :all
 
   def index
     @portfolio_items = Portfolio.by_position
   end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
+  end
   
-def reactjs
-  @portfolio_react = Portfolio.reactjs
-end
+
+  def reactjs
+    @portfolio_react = Portfolio.reactjs
+  end
 
   def new
     @portfolio_item = Portfolio.new
@@ -32,9 +41,7 @@ end
     end
   end
 
-  def edit
-   
-  end
+  def edit; end
 
   def update
     respond_to do |format|
@@ -48,12 +55,9 @@ end
     end
   end
 
-  def show
-
-  end
+  def show; end
 
   def destroy
-    
     @portfolio_item.destroy
 
     respond_to do |format|
@@ -65,9 +69,9 @@ end
 
   def portfolio_params
     params.require(:portfolio).permit(
-      :title, 
-      :subtitle, 
-      :body, 
+      :title,
+      :subtitle,
+      :body,
       technologies_attributes: [:name]
     )
   end
@@ -75,7 +79,4 @@ end
   def set_portfolio_item
     @portfolio_item = Portfolio.find(params[:id])
   end
-  
-
-  
 end
