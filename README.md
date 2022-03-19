@@ -126,7 +126,7 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 ## Font Awesome Rails Gem
 [Font Awesome Rails](https://github.com/bokmann/font-awesome-rails)
 
-
+## Image / Video Implementations
 
 ## Kaminari Gem
 [Kaminari](https://github.com/kaminari/kaminari)
