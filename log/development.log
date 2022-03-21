@@ -23275,3 +23275,70 @@ Did you mean?  portfolio_path
   
 app/views/portfolios/_portfolio_item.html.erb:4
 app/views/portfolios/index.html.erb:4
+Started GET "/portfolios/new" for 127.0.0.1 at 2022-03-21 13:11:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#new as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/_form.html.erb (Duration: 216.8ms | Allocations: 5397)
+  Rendered portfolios/new.html.erb within layouts/portfolio (Duration: 228.1ms | Allocations: 6086)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 24.1ms | Allocations: 844)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 13.6ms | Allocations: 288)
+  Rendered layout layouts/portfolio.html.erb (Duration: 294.1ms | Allocations: 11138)
+Completed 200 OK in 1016ms (Views: 316.6ms | ActiveRecord: 50.2ms | Allocations: 58642)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2022-03-21 13:12:44 +0100
+Processing by PortfoliosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Test AWS", "subtitle"=>"Image upload to Aws", "thumb_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f200f78de18 @tempfile=#<Tempfile:/tmp/RackMultipart20220321-20196-rtk7mw.jpeg>, @original_filename="water.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"portfolio[thumb_image]\"; filename=\"water.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "main_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f200f78dd78 @tempfile=#<Tempfile:/tmp/RackMultipart20220321-20196-p2ynde.png>, @original_filename="home_bg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"portfolio[main_image]\"; filename=\"home_bg.png\"\r\nContent-Type: image/png\r\n">, "body"=>"Image upload to AWS bucket", "technologies_attributes"=>{"0"=>{"name"=>"Ruby"}, "1"=>{"name"=>"Ruby"}, "2"=>{"name"=>"Ruby"}}}, "commit"=>"Create Project"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+  [1m[36mPortfolio Create (1.9ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Test AWS"], ["subtitle", "Image upload to Aws"], ["body", "Image upload to AWS bucket"], ["main_image", "home_bg.png"], ["thumb_image", "water.jpeg"], ["created_at", "2022-03-21 12:13:03.258790"], ["updated_at", "2022-03-21 12:13:03.258790"], ["position", nil]]
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+  [1m[36mTechnology Create (3.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 11], ["created_at", "2022-03-21 12:13:03.286058"], ["updated_at", "2022-03-21 12:13:03.286058"]]
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+  [1m[36mTechnology Create (2.7ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 11], ["created_at", "2022-03-21 12:13:03.318275"], ["updated_at", "2022-03-21 12:13:03.318275"]]
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+  [1m[36mTechnology Create (1.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 11], ["created_at", "2022-03-21 12:13:03.333791"], ["updated_at", "2022-03-21 12:13:03.333791"]]
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:34:in `block in create'
+Redirected to http://127.0.0.1:3000/portfolios
+Completed 302 Found in 21035ms (ActiveRecord: 18.6ms | Allocations: 42593)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-21 13:13:06 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [11 times] (Duration: 178.6ms | Allocations: 5602)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 291.7ms | Allocations: 7895)
+  Rendered layout layouts/portfolio.html.erb (Duration: 308.5ms | Allocations: 7986)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 4.0ms | Allocations: 9721)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<PortfolioUploader:0x00007f200e035928 @model=#<Portfolio id: 1, title: "Portfolio title 0", subtitle: "Ruby on Rails", body: "Lorem ipsum dolor sit amet, consectetur adipiscing...", main_image: "https://via.placeholder.com/600x400", thumb_image: "https://via.placeholder.com/350x200", created_at: "2022-03-19 11:14:28.457321000 +0000", updated_at: "2022-03-19 11:14:28.457321000 +0000", position: nil>, @mounted_as=:thumb_image, @staged=false, @file=#<CarrierWave::Storage::AWSFile:0x00007f200e035590 @uploader=#<PortfolioUploader:0x00007f200e035928 ...>, @connection=#<Aws::S3::Resource:0x00007f200f771fb0 @client=#<Aws::S3::Client>>, @path="uploads/portfolio/thumb_image/1/https://via.placeholder.com/350x200", @aws_options=#<CarrierWave::Storage::AWSOptions:0x00007f200e035568 @uploader=#<PortfolioUploader:0x00007f200e035928 ...>>>, @filename=nil, @cache_id=nil, @identifier="https://via.placeholder.com/350x200", @versions={}, @versions_to_cache=nil, @versions_to_store=nil, @storage=#<CarrierWave::Storage::AWS:0x00007f200e035860 @uploader=#<PortfolioUploader:0x00007f200e035928 ...>, @connection=#<Aws::S3::Resource:0x00007f200f771fb0 @client=#<Aws::S3::Client>>>>
+
+            model = record.to_model
+                          ^^^^^^^^^
+Did you mean?  to_xml):
+    1: 
+    2: <div class="col-md-4" data-id="<% portfolio_item.id%>">
+    3:   <div class="card mb-4 box-shadow" data-id=<%= portfolio_item %>>
+    4:     <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+    5:     <div class="card-body">
+    6:       <p class="card-text">
+    7:         <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span> -
+  
+app/views/portfolios/_portfolio_item.html.erb:4
+app/views/portfolios/index.html.erb:4
+  [1m[36mPortfolio Load (2.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
