@@ -128,6 +128,13 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 
 ## Image / Video Implementations
 
+> Image upload
+- Utilizing the following gems
+- [dotenv-rails](https://github.com/bkeepers/dotenv)
+- [carrierwave-aws](https://blog.makersacademy.com/how-to-use-aws-to-store-carrierwave-image-uploads-in-your-heroku-rails-app-1957f610c874)
+- [carrierwave](https://rubygems.org/gems/carrierwave)
+- [mini_magick](https://github.com/minimagick/minimagick)
+
 ## Kaminari Gem
 [Kaminari](https://github.com/kaminari/kaminari)
 - Used for pagination
