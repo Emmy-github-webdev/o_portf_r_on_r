@@ -22586,3 +22586,233 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 205ms (Views: 119.3ms | ActiveRecord: 18.6ms | Allocations: 32252)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:04:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (38.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.8ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 304.7ms | Allocations: 13551)
+  Rendered shared/_application_footer.html.erb (Duration: 33.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 447.0ms | Allocations: 18600)
+Completed 200 OK in 1007ms (Views: 321.4ms | ActiveRecord: 155.3ms | Allocations: 32113)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:10:17 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 344)
+  Rendered layout layouts/application.html.erb (Duration: 66388.8ms | Allocations: 325580)
+Completed 500 Internal Server Error in 66403ms (Allocations: 326893)
+
+
+  
+ActionView::Template::Error (Asset `water_wave.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link water_wave.mp4
+
+and restart your server):
+    14: 
+    15:   <body class="text-center">
+    16:     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    17:       <%= video_tag(
+    18:         'water_wave.mp4',
+    19:         id: 'background'
+    20:       )%>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:16:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 687)
+  Rendered layout layouts/application.html.erb (Duration: 662.3ms | Allocations: 77716)
+Completed 500 Internal Server Error in 758ms (ActiveRecord: 0.0ms | Allocations: 91187)
+
+
+  
+ActionView::Template::Error (Asset `water_wave.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link water_wave.mp4
+
+and restart your server):
+    14: 
+    15:   <body class="text-center">
+    16:     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    17:       <%= video_tag(
+    18:         'water_wave.mp4',
+    19:         id: 'background',
+    20:         autoplay: true,
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:20:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 68436.4ms | Allocations: 319664)
+Completed 500 Internal Server Error in 68615ms (ActiveRecord: 0.0ms | Allocations: 335947)
+
+
+  
+ActionView::Template::Error (Asset `water_wave.mp4` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link water_wave.mp4
+
+and restart your server):
+    14: 
+    15:   <body class="text-center">
+    16:     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    17:       <%= video_tag(
+    18:         'water_wave.mp4',
+    19:         id: 'background',
+    20:         autoplay: true,
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:24:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.3ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 122.9ms | Allocations: 13771)
+  Rendered shared/_application_footer.html.erb (Duration: 2.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 959.6ms | Allocations: 71088)
+Completed 200 OK in 1085ms (Views: 960.2ms | ActiveRecord: 18.4ms | Allocations: 84617)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:25:22 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 74)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 317)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 1976)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 2384)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:26:14 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.9ms | Allocations: 347)
+  Rendered shared/_application_nav.html.erb (Duration: 4.8ms | Allocations: 573)
+  Rendered shared/_application_footer.html.erb (Duration: 1.9ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 3484)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.0ms | Allocations: 4761)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:27:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 86.3ms | Allocations: 13550)
+  Rendered shared/_application_footer.html.erb (Duration: 0.9ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 119.3ms | Allocations: 18801)
+Completed 200 OK in 205ms (Views: 116.0ms | ActiveRecord: 18.4ms | Allocations: 32323)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:28:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.0ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 156.1ms | Allocations: 13550)
+  Rendered shared/_application_footer.html.erb (Duration: 1.7ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 235.0ms | Allocations: 18813)
+Completed 200 OK in 376ms (Views: 227.9ms | ActiveRecord: 25.7ms | Allocations: 32343)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:44:09 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 36.4ms | Allocations: 344)
+  Rendered shared/_application_nav.html.erb (Duration: 14.8ms | Allocations: 616)
+  Rendered shared/_application_footer.html.erb (Duration: 16.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 64977.6ms | Allocations: 191836)
+Completed 200 OK in 65023ms (Views: 65018.9ms | Allocations: 193144)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:46:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 25.3ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 152.4ms | Allocations: 13596)
+  Rendered shared/_application_footer.html.erb (Duration: 3.5ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 680.4ms | Allocations: 59231)
+Completed 200 OK in 1090ms (Views: 679.7ms | ActiveRecord: 20.0ms | Allocations: 72744)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-03-21 09:46:39 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 24.8ms | Allocations: 323)
+  Rendered shared/_application_nav.html.erb (Duration: 3.2ms | Allocations: 343)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 2130)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 0.0ms | Allocations: 2586)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-03-21 09:46:57 +0100
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 188.4ms | Allocations: 9148)
+  Rendered shared/_application_nav.html.erb (Duration: 2.1ms | Allocations: 352)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 201.8ms | Allocations: 11077)
+Completed 200 OK in 217ms (Views: 204.8ms | ActiveRecord: 0.0ms | Allocations: 11468)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-21 09:47:12 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (119.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 29.7ms | Allocations: 933)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 223.3ms | Allocations: 9637)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 20.2ms | Allocations: 549)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 13.8ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 13.0ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 295.5ms | Allocations: 12362)
+Completed 200 OK in 356ms (Views: 172.2ms | ActiveRecord: 130.4ms | Allocations: 17044)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-21 09:51:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 687)
+  Rendered shared/_application_nav.html.erb (Duration: 110.1ms | Allocations: 13596)
+  Rendered shared/_application_footer.html.erb (Duration: 1.7ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 620.4ms | Allocations: 59788)
+Completed 200 OK in 775ms (Views: 622.2ms | ActiveRecord: 25.3ms | Allocations: 73321)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-03-21 09:52:30 +0100
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 11.4ms | Allocations: 326)
+  Rendered shared/_application_nav.html.erb (Duration: 8.3ms | Allocations: 343)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 2125)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 2585)
+
+
