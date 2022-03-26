@@ -14,7 +14,14 @@
 
   <body class="text-center">
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-   
+      <%= video_tag(
+        'water_player.mp4',
+        id: 'background',
+        autoplay: true,
+        loop: true,
+        muted: true,
+        poster: 'water.jpeg'
+      )%>
       <%= render 'shared/application_nav' %>
         <%= yield %>
       <%= render 'shared/application_footer' %>
