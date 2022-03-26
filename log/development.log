@@ -24084,3 +24084,350 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 293ms (Views: 252.7ms | ActiveRecord: 14.3ms | Allocations: 20305)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2022-03-26 21:44:25 +0100
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (4.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 73.8ms | Allocations: 4036)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 193.0ms | Allocations: 10171)
+  Rendered shared/_blog_nav.html.erb (Duration: 17.0ms | Allocations: 502)
+  Rendered shared/_blog_masthead.html.erb (Duration: 16.7ms | Allocations: 311)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.5ms | Allocations: 936)
+  Rendered shared/_blog_footer.html.erb (Duration: 16.2ms | Allocations: 193)
+  Rendered layout layouts/blog.html.erb (Duration: 287.9ms | Allocations: 13773)
+Completed 200 OK in 356ms (Views: 273.8ms | ActiveRecord: 30.6ms | Allocations: 19387)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-03-26 21:44:33 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 24.8ms | Allocations: 1370)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 125.0ms | Allocations: 5401)
+  Rendered shared/_application_nav.html.erb (Duration: 22.8ms | Allocations: 598)
+  Rendered shared/_application_footer.html.erb (Duration: 10.5ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 1229.4ms | Allocations: 47997)
+Completed 200 OK in 1271ms (Views: 1243.9ms | ActiveRecord: 0.0ms | Allocations: 50388)
+
+
+Started GET "/register" for 127.0.0.1 at 2022-03-26 21:44:39 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 20.1ms | Allocations: 386)
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 276)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 109.8ms | Allocations: 3066)
+  Rendered shared/_application_nav.html.erb (Duration: 1.8ms | Allocations: 327)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 123.7ms | Allocations: 4799)
+Completed 200 OK in 147ms (Views: 134.6ms | ActiveRecord: 0.0ms | Allocations: 6559)
+
+
+Started POST "/" for 127.0.0.1 at 2022-03-26 21:45:09 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Emmanuel Ogah", "email"=>"ogaemmanuel@ymail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ogaemmanuel@ymail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "roles") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "ogaemmanuel@ymail.com"], ["encrypted_password", "$2a$12$R5qh/EavS9d3lUx.Q.n2Y.OQMG1DlAHm06T/BvhmXnW3QUPdp.dZq"], ["name", "Emmanuel Ogah"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-03-26 20:45:10.815138"], ["updated_at", "2022-03-26 20:45:10.815138"], ["roles", "user"]]
+  [1m[36mTRANSACTION (349.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1197ms (ActiveRecord: 355.1ms | Allocations: 9176)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-26 21:45:11 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 19.5ms | Allocations: 355)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 15.1ms | Allocations: 1201)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 3299)
+Completed 200 OK in 86ms (Views: 61.5ms | ActiveRecord: 2.0ms | Allocations: 5074)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:45:19 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 9.8ms | Allocations: 1056)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 24.0ms | Allocations: 2208)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 0.7ms | Allocations: 182)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 32.6ms | Allocations: 3167)
+Completed 200 OK in 50ms (Views: 33.5ms | ActiveRecord: 2.2ms | Allocations: 4663)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2022-03-26 21:45:23 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 21.7ms | Allocations: 768)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 10.9ms | Allocations: 188)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.8ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.6ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 48.7ms | Allocations: 1733)
+Completed 200 OK in 90ms (Views: 51.8ms | ActiveRecord: 5.6ms | Allocations: 3615)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:45:48 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 8.1ms | Allocations: 706)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 21.2ms | Allocations: 1558)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 2.1ms | Allocations: 179)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 34.4ms | Allocations: 2514)
+Completed 200 OK in 55ms (Views: 35.0ms | ActiveRecord: 4.1ms | Allocations: 3904)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2022-03-26 21:46:04 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (3.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as #<Proc:0x00007f7e61390080 /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/petergate-3.0.0/lib/petergate/action_controller/base.rb:47> rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 5.3ms | Allocations: 1949)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-26 21:46:04 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 51)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 14.5ms | Allocations: 985)
+  Rendered shared/_application_footer.html.erb (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 2515)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 1.4ms | Allocations: 2848)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "roles" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2022-03-26 20:48:09.083168"], ["roles", "portfolio_admin"], ["id", 1]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 21:48:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 21:48:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-26 21:49:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 686)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 112.2ms | Allocations: 14524)
+  Rendered shared/_application_footer.html.erb (Duration: 2.5ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 585.4ms | Allocations: 60494)
+Completed 200 OK in 691ms (Views: 576.8ms | ActiveRecord: 25.1ms | Allocations: 73909)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 21:49:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-26 21:50:39 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 72)
+  Rendered shared/_application_nav.html.erb (Duration: 35.7ms | Allocations: 2625)
+  Rendered shared/_application_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 4135)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 4524)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-03-26 21:50:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 1372)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.7ms | Allocations: 6734)
+  Rendered shared/_application_nav.html.erb (Duration: 7.3ms | Allocations: 327)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 8471)
+Completed 200 OK in 88ms (Views: 77.7ms | ActiveRecord: 0.0ms | Allocations: 10761)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-26 21:50:57 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ogaemmanuel@ymail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ogaemmanuel@ymail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1065ms (ActiveRecord: 2.3ms | Allocations: 4470)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-26 21:50:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 63)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 14.8ms | Allocations: 1123)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 2727)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 1.0ms | Allocations: 3091)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:51:23 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (411.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 13.9ms | Allocations: 1209)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 485.3ms | Allocations: 9681)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.4ms | Allocations: 488)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 7.9ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 555.2ms | Allocations: 11821)
+Completed 200 OK in 780ms (Views: 137.9ms | ActiveRecord: 429.6ms | Allocations: 22750)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2022-03-26 21:51:33 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (3.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 188.2ms | Allocations: 7224)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 1.4ms | Allocations: 214)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 200.9ms | Allocations: 8152)
+Completed 200 OK in 233ms (Views: 196.9ms | ActiveRecord: 12.0ms | Allocations: 10833)
+
+
+Started GET "/portfolio/1/edit" for 127.0.0.1 at 2022-03-26 21:51:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/portfolio/1/edit"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 21:52:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/blogs" for 127.0.0.1 at 2022-03-26 22:01:35 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 30.1ms | Allocations: 1954)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 107.6ms | Allocations: 8162)
+  Rendered shared/_blog_nav.html.erb (Duration: 8.4ms | Allocations: 439)
+  Rendered shared/_blog_masthead.html.erb (Duration: 5.7ms | Allocations: 247)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 6.7ms | Allocations: 922)
+  Rendered shared/_blog_footer.html.erb (Duration: 13.2ms | Allocations: 193)
+  Rendered layout layouts/blog.html.erb (Duration: 160.1ms | Allocations: 11622)
+Completed 200 OK in 363ms (Views: 145.5ms | ActiveRecord: 70.9ms | Allocations: 16735)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 22:01:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 22:05:39 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 7.4ms | Allocations: 1216)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 53.1ms | Allocations: 4723)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 43.0ms | Allocations: 804)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.1ms | Allocations: 283)
+  Rendered layout layouts/portfolio.html.erb (Duration: 119.6ms | Allocations: 9525)
+Completed 200 OK in 272ms (Views: 113.3ms | ActiveRecord: 31.1ms | Allocations: 24946)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 22:08:29 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 9.4ms | Allocations: 773)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 29.4ms | Allocations: 1667)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.5ms | Allocations: 184)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.4ms | Allocations: 33)
+  Rendered layout layouts/portfolio.html.erb (Duration: 49.5ms | Allocations: 2532)
+Completed 200 OK in 81ms (Views: 46.7ms | ActiveRecord: 7.2ms | Allocations: 4125)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 22:11:19 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 9.1ms | Allocations: 1166)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 25.0ms | Allocations: 2399)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.9ms | Allocations: 484)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.3ms | Allocations: 339)
+  Rendered layout layouts/portfolio.html.erb (Duration: 48.5ms | Allocations: 4591)
+Completed 200 OK in 75ms (Views: 55.6ms | ActiveRecord: 4.3ms | Allocations: 6750)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-26 22:12:47 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 349)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 24.2ms | Allocations: 1409)
+  Rendered shared/_application_footer.html.erb (Duration: 1.5ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 4298)
+Completed 200 OK in 148ms (Views: 58.2ms | ActiveRecord: 1.3ms | Allocations: 8750)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 22:12:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
