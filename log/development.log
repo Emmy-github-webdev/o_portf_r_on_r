@@ -23486,3 +23486,601 @@ Processing by PortfoliosController#edit as HTML
 Completed 200 OK in 405ms (Views: 342.8ms | ActiveRecord: 37.0ms | Allocations: 14741)
 
 
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2022-03-26 20:19:01 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (2.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:39
+  Rendered portfolios/_form.html.erb (Duration: 24.7ms | Allocations: 2686)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (Duration: 27.8ms | Allocations: 3058)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 3.0ms | Allocations: 488)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.5ms | Allocations: 250)
+  Rendered layout layouts/portfolio.html.erb (Duration: 42.5ms | Allocations: 5146)
+Completed 200 OK in 153ms (Views: 45.7ms | ActiveRecord: 30.6ms | Allocations: 10497)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2022-03-26 20:19:47 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (2.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (5.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:39
+  Rendered portfolios/_form.html.erb (Duration: 41.8ms | Allocations: 2680)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (Duration: 48.9ms | Allocations: 3052)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 4.6ms | Allocations: 488)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 2.6ms | Allocations: 250)
+  Rendered layout layouts/portfolio.html.erb (Duration: 68.9ms | Allocations: 5140)
+Completed 200 OK in 106ms (Views: 68.6ms | ActiveRecord: 10.9ms | Allocations: 8032)
+
+
+Started PATCH "/portfolios/1" for 127.0.0.1 at 2022-03-26 20:20:19 +0100
+Processing by PortfoliosController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "portfolio"=>{"title"=>"Portfolio title 0", "subtitle"=>"Ruby on Rails", "thumb_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fd214f861f8 @tempfile=#<Tempfile:/tmp/RackMultipart20220326-2157-3u3ugd.jpg>, @original_filename="DevTeam.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"portfolio[thumb_image]\"; filename=\"DevTeam.jpg\"\r\nContent-Type: image/jpeg\r\n">, "main_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fd214f85ff0 @tempfile=#<Tempfile:/tmp/RackMultipart20220326-2157-uau32w.mp4>, @original_filename="HardDrivePhotojpeg.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"portfolio[main_image]\"; filename=\"HardDrivePhotojpeg.mp4\"\r\nContent-Type: video/mp4\r\n">, "body"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}, "commit"=>"Create Project", "id"=>"1"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+Completed 500 Internal Server Error in 2196ms (ActiveRecord: 3.8ms | Allocations: 9283)
+
+
+  
+Seahorse::Client::NetworkingError (Failed to open TCP connection to my-portfolio-rails-bucket.s3.amazonaws.com:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/portfolios_controller.rb:48:in `block in update'
+app/controllers/portfolios_controller.rb:47:in `update'
+  [1m[35m (48.4ms)[0m  [1m[35mCREATE DATABASE "o_portf_r_on_r_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE DATABASE "o_portf_r_on_r_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (31.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (41.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (331.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (395.8ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (68.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp(6))[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (8.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE INDEX "index_technologies_on_portfolio_id" ON "technologies" ("portfolio_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (33.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (70.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (181.3ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (5.6ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (24.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (547.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (445.4ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (72.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (106.6ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp(6))[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (64.2ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE INDEX "index_technologies_on_portfolio_id" ON "technologies" ("portfolio_id")[0m
+  [1m[35m (6.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (45.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (63.8ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (48.6ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (27.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (22.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-03-26 20:22:37.022595"], ["key", "environment"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-03-26 20:22:37.078004"], ["key", "environment"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (2.8ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2022-03-26 20:22:37.426288"], ["updated_at", "2022-03-26 20:22:37.426288"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (1.7ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2022-03-26 20:22:37.453256"], ["updated_at", "2022-03-26 20:22:37.453256"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (1.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2022-03-26 20:22:37.475617"], ["updated_at", "2022-03-26 20:22:37.475617"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (3.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-0"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (3.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 0"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:37.873156"], ["updated_at", "2022-03-26 20:22:37.873156"], ["slug", "my-blog-title-0"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-1"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (2.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 1"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:37.939812"], ["updated_at", "2022-03-26 20:22:37.939812"], ["slug", "my-blog-title-1"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (2.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 2"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:37.996540"], ["updated_at", "2022-03-26 20:22:37.996540"], ["slug", "my-blog-title-2"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-3"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (2.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 3"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.044114"], ["updated_at", "2022-03-26 20:22:38.044114"], ["slug", "my-blog-title-3"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-4"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (2.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 4"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.100316"], ["updated_at", "2022-03-26 20:22:38.100316"], ["slug", "my-blog-title-4"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-5"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 5"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.161267"], ["updated_at", "2022-03-26 20:22:38.161267"], ["slug", "my-blog-title-5"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-6"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.9ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 6"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.206538"], ["updated_at", "2022-03-26 20:22:38.206538"], ["slug", "my-blog-title-6"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-7"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 7"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.260503"], ["updated_at", "2022-03-26 20:22:38.260503"], ["slug", "my-blog-title-7"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-8"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.9ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 8"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.400003"], ["updated_at", "2022-03-26 20:22:38.400003"], ["slug", "my-blog-title-8"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-9"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 9"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:22:38.445488"], ["updated_at", "2022-03-26 20:22:38.445488"], ["slug", "my-blog-title-9"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "o_portf_r_on_r_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "o_portf_r_on_r_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (71.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (432.3ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (11.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp(6))[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (11.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (63.7ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (20.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  [1m[35m (79.0ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE INDEX "index_technologies_on_portfolio_id" ON "technologies" ("portfolio_id")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (48.9ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (21.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (11.3ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (9.7ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (50.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  [1m[35m (33.3ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (55.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  [1m[35m (78.6ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp(6))[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (56.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "position" integer)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (52.7ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "badge" text)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE INDEX "index_technologies_on_portfolio_id" ON "technologies" ("portfolio_id")[0m
+  [1m[35m (8.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  [1m[35m (24.2ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (22.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "roles" character varying)[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (14.5ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-03-26 20:30:54.701163"], ["key", "environment"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-03-26 20:30:54.731620"], ["key", "environment"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (2.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2022-03-26 20:30:55.002301"], ["updated_at", "2022-03-26 20:30:55.002301"]]
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (1.8ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2022-03-26 20:30:55.043236"], ["updated_at", "2022-03-26 20:30:55.043236"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (1.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2022-03-26 20:30:55.071313"], ["updated_at", "2022-03-26 20:30:55.071313"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-0"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (3.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 0"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.282579"], ["updated_at", "2022-03-26 20:30:55.282579"], ["slug", "my-blog-title-0"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (107.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-1"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 1"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.435381"], ["updated_at", "2022-03-26 20:30:55.435381"], ["slug", "my-blog-title-1"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 2"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.482425"], ["updated_at", "2022-03-26 20:30:55.482425"], ["slug", "my-blog-title-2"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-3"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 3"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.521137"], ["updated_at", "2022-03-26 20:30:55.521137"], ["slug", "my-blog-title-3"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-4"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (2.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 4"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.557815"], ["updated_at", "2022-03-26 20:30:55.557815"], ["slug", "my-blog-title-4"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.1ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-5"], ["LIMIT", 1]]
+  [1m[36mTopic Load (1.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (15.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 5"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.606112"], ["updated_at", "2022-03-26 20:30:55.606112"], ["slug", "my-blog-title-5"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (1.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-6"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 6"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.703971"], ["updated_at", "2022-03-26 20:30:55.703971"], ["slug", "my-blog-title-6"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-7"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 7"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.740822"], ["updated_at", "2022-03-26 20:30:55.740822"], ["slug", "my-blog-title-7"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (2.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-8"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 8"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.782872"], ["updated_at", "2022-03-26 20:30:55.782872"], ["slug", "my-blog-title-8"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.8ms)[0m  [1m[34mSELECT "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-9"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "My blog title 9"], ["body", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["created_at", "2022-03-26 20:30:55.822094"], ["updated_at", "2022-03-26 20:30:55.822094"], ["slug", "my-blog-title-9"], ["status", 0], ["topic_id", 3]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (3.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 0"], ["percent_utilized", 25], ["created_at", "2022-03-26 20:30:55.880891"], ["updated_at", "2022-03-26 20:30:55.880891"], ["badge", nil]]
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.2ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 1"], ["percent_utilized", 25], ["created_at", "2022-03-26 20:30:55.927170"], ["updated_at", "2022-03-26 20:30:55.927170"], ["badge", nil]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 2"], ["percent_utilized", 25], ["created_at", "2022-03-26 20:30:55.944563"], ["updated_at", "2022-03-26 20:30:55.944563"], ["badge", nil]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 3"], ["percent_utilized", 25], ["created_at", "2022-03-26 20:30:55.962757"], ["updated_at", "2022-03-26 20:30:55.962757"], ["badge", nil]]
+  [1m[36mTRANSACTION (63.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkill Create (1.4ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 4"], ["percent_utilized", 25], ["created_at", "2022-03-26 20:30:56.039927"], ["updated_at", "2022-03-26 20:30:56.039927"], ["badge", nil]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (2.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.205127"], ["updated_at", "2022-03-26 20:30:56.205127"], ["position", nil]]
+  [1m[36mTRANSACTION (35.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 1"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.265586"], ["updated_at", "2022-03-26 20:30:56.265586"], ["position", nil]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.0ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 2"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.284897"], ["updated_at", "2022-03-26 20:30:56.284897"], ["position", nil]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 3"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.304686"], ["updated_at", "2022-03-26 20:30:56.304686"], ["position", nil]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 4"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.322661"], ["updated_at", "2022-03-26 20:30:56.322661"], ["position", nil]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "ReactJS"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.342774"], ["updated_at", "2022-03-26 20:30:56.342774"], ["position", nil]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.1ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 1"], ["subtitle", "ReactJS"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.363635"], ["updated_at", "2022-03-26 20:30:56.363635"], ["position", nil]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 2"], ["subtitle", "ReactJS"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.381501"], ["updated_at", "2022-03-26 20:30:56.381501"], ["position", nil]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (1.1ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Portfolio title 3"], ["subtitle", "ReactJS"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["main_image", nil], ["thumb_image", nil], ["created_at", "2022-03-26 20:30:56.404427"], ["updated_at", "2022-03-26 20:30:56.404427"], ["position", nil]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (3.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTechnology Create (2.2ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 0"], ["portfolio_id", 9], ["created_at", "2022-03-26 20:30:56.482686"], ["updated_at", "2022-03-26 20:30:56.482686"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTechnology Create (1.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 1"], ["portfolio_id", 9], ["created_at", "2022-03-26 20:30:56.522699"], ["updated_at", "2022-03-26 20:30:56.522699"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTechnology Create (1.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 2"], ["portfolio_id", 9], ["created_at", "2022-03-26 20:30:56.565244"], ["updated_at", "2022-03-26 20:30:56.565244"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:31:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (5.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 26.6ms | Allocations: 5675)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 100.8ms | Allocations: 14386)
+  Rendered layout layouts/portfolio.html.erb (Duration: 102.0ms | Allocations: 14487)
+Completed 500 Internal Server Error in 372ms (ActiveRecord: 45.5ms | Allocations: 47995)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<PortfolioUploader:0x00007f7e62c3b788 @model=#<Portfolio id: 1, title: "Portfolio title 0", subtitle: "Ruby on Rails", body: "Lorem ipsum dolor sit amet, consectetur adipiscing...", main_image: nil, thumb_image: nil, created_at: "2022-03-26 20:30:56.205127000 +0000", updated_at: "2022-03-26 20:30:56.205127000 +0000", position: nil>, @mounted_as=:thumb_image, @staged=false, @file=nil, @filename=nil, @cache_id=nil, @identifier=nil, @versions=nil, @versions_to_cache=nil, @versions_to_store=nil>
+
+            model = record.to_model
+                          ^^^^^^^^^
+Did you mean?  to_xml):
+    1: 
+    2: <div class="col-md-4" data-id="<% portfolio_item.id%>">
+    3:   <div class="card mb-4 box-shadow" data-id=<%= portfolio_item %>>
+    4:     <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb') %>
+    5:     <div class="card-body">
+    6:       <p class="card-text">
+    7:         <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span> -
+  
+app/views/portfolios/_portfolio_item.html.erb:4
+app/views/portfolios/index.html.erb:4
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:37:41 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (6.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 24.9ms | Allocations: 4907)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 42.9ms | Allocations: 6224)
+  Rendered layout layouts/portfolio.html.erb (Duration: 46.9ms | Allocations: 6319)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 39.2ms | Allocations: 11314)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<PortfolioUploader:0x00007f7e60d83ea8 @model=#<Portfolio id: 1, title: "Portfolio title 0", subtitle: "Ruby on Rails", body: "Lorem ipsum dolor sit amet, consectetur adipiscing...", main_image: nil, thumb_image: nil, created_at: "2022-03-26 20:30:56.205127000 +0000", updated_at: "2022-03-26 20:30:56.205127000 +0000", position: nil>, @mounted_as=:thumb_image, @staged=false, @file=nil, @filename=nil, @cache_id=nil, @identifier=nil, @versions=nil, @versions_to_cache=nil, @versions_to_store=nil>
+
+            model = record.to_model
+                          ^^^^^^^^^
+Did you mean?  to_xml):
+    1: 
+    2: <div class="col-md-4" data-id="<% portfolio_item.id%>">
+    3:   <div class="card mb-4 box-shadow" data-id=<%= portfolio_item %>>
+    4:     <%= image_tag(portfolio_img(portfolio_item.thumb_image, 'thumb')) %>
+    5:     <div class="card-body">
+    6:       <p class="card-text">
+    7:         <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span> -
+  
+app/views/portfolios/_portfolio_item.html.erb:4
+app/views/portfolios/index.html.erb:4
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 21:41:27 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (4.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 8.2ms | Allocations: 1215)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 30.2ms | Allocations: 2609)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.8ms | Allocations: 564)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 37.3ms | Allocations: 310)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 1.7ms | Allocations: 253)
+  Rendered layout layouts/portfolio.html.erb (Duration: 142.8ms | Allocations: 7800)
+Completed 200 OK in 190ms (Views: 147.9ms | ActiveRecord: 13.3ms | Allocations: 10368)
+
+
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-26 21:41:37 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (2.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 47.8ms | Allocations: 4514)
+  Rendered layout layouts/portfolio.html.erb (Duration: 49.4ms | Allocations: 4602)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 2.0ms | Allocations: 6724)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<PortfolioUploader:0x00007f7e60e620b8 @model=#<Portfolio id: 3, title: "Portfolio title 2", subtitle: "Ruby on Rails", body: "Lorem ipsum dolor sit amet, consectetur adipiscing...", main_image: nil, thumb_image: nil, created_at: "2022-03-26 20:30:56.284897000 +0000", updated_at: "2022-03-26 20:30:56.284897000 +0000", position: nil>, @mounted_as=:main_image, @staged=false, @file=nil, @filename=nil, @cache_id=nil, @identifier=nil, @versions=nil, @versions_to_cache=nil, @versions_to_store=nil>
+
+            model = record.to_model
+                          ^^^^^^^^^
+Did you mean?  to_xml):
+    1: <div class="container portfolio-form">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:      <%= image_tag @portfolio_item.main_image, width: '100%' %>
+    5:     </div>
+    6: 
+    7:     <div class="col-md-5">
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-26 21:42:09 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (3.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 12.2ms | Allocations: 1500)
+  Rendered layout layouts/portfolio.html.erb (Duration: 19.1ms | Allocations: 1594)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 3.2ms | Allocations: 3703)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    1: <div class="container portfolio-form">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:      <%= image_tag @portfolio_item.main_image_url, width: '100%' %>
+    5:     </div>
+    6: 
+    7:     <div class="col-md-5">
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-26 21:43:09 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 87.8ms | Allocations: 6081)
+  Rendered layout layouts/portfolio.html.erb (Duration: 89.9ms | Allocations: 6176)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.4ms | Allocations: 8469)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `portfolio_item' for #<ActionView::Base:0x00000000010b80>
+Did you mean?  @portfolio_item
+               portfolio_img
+               portfolio_path
+               portfolio_url):
+    1: <div class="container portfolio-form">
+    2:   <div class="row">
+    3:     <div class="col-md-7">
+    4:     <%= image_tag portfolio_img(portfolio_item.main_image_url, 'thumb'), width: '100%' %>
+    5:     </div>
+    6: 
+    7:     <div class="col-md-5">
+  
+app/views/portfolios/show.html.erb:4
+Started GET "/portfolio/3" for 127.0.0.1 at 2022-03-26 21:43:40 +0100
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (1.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 3]]
+  ↳ app/views/portfolios/show.html.erb:14
+  Rendered portfolios/show.html.erb within layouts/portfolio (Duration: 226.4ms | Allocations: 15180)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 5.4ms | Allocations: 598)
+  Rendered shared/_portfolio_masthead.html.erb (Duration: 2.7ms | Allocations: 304)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 5.3ms | Allocations: 250)
+  Rendered layout layouts/portfolio.html.erb (Duration: 253.4ms | Allocations: 17989)
+Completed 200 OK in 293ms (Views: 252.7ms | ActiveRecord: 14.3ms | Allocations: 20305)
+
+
