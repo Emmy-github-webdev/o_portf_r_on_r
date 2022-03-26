@@ -24431,3 +24431,267 @@ Started GET "/logout" for 127.0.0.1 at 2022-03-26 22:12:52 +0100
   
 ActionController::RoutingError (No route matches [GET] "/logout"):
   
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2022-03-26 22:20:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.8ms | Allocations: 686)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 118.5ms | Allocations: 14520)
+  Rendered shared/_application_footer.html.erb (Duration: 1.6ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 1532.9ms | Allocations: 60482)
+Completed 200 OK in 1832ms (Views: 1527.0ms | ActiveRecord: 19.2ms | Allocations: 73880)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 22:20:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/portfolios" for 127.0.0.1 at 2022-03-26 22:21:09 +0100
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY position ASC[0m
+  ↳ app/views/portfolios/index.html.erb:4
+  Rendered collection of portfolios/_portfolio_item.html.erb [9 times] (Duration: 20.6ms | Allocations: 1268)
+  Rendered portfolios/index.html.erb within layouts/portfolio (Duration: 123.3ms | Allocations: 9585)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.8ms | Allocations: 488)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 47.5ms | Allocations: 361)
+  Rendered layout layouts/portfolio.html.erb (Duration: 197.9ms | Allocations: 11837)
+Completed 200 OK in 281ms (Views: 197.3ms | ActiveRecord: 18.3ms | Allocations: 22823)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2022-03-26 22:21:19 +0100
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:82:in `set_portfolio_item'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/portfolio.html.erb
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:39
+  Rendered portfolios/_form.html.erb (Duration: 473.8ms | Allocations: 19383)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (Duration: 499.2ms | Allocations: 19718)
+  Rendered shared/_portfolio_nav.html.erb (Duration: 7.3ms | Allocations: 193)
+  Rendered shared/_portfolio_footer.html.erb (Duration: 0.7ms | Allocations: 78)
+  Rendered layout layouts/portfolio.html.erb (Duration: 513.2ms | Allocations: 20643)
+Completed 200 OK in 626ms (Views: 510.3ms | ActiveRecord: 8.1ms | Allocations: 23371)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-26 22:59:46 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 51)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 117.0ms | Allocations: 3450)
+  Rendered shared/_application_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 152.7ms | Allocations: 4994)
+Completed 200 OK in 160ms (Views: 155.2ms | ActiveRecord: 30.3ms | Allocations: 5373)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 22:59:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 23:03:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 23:03:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 23:04:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 23:04:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 127.0.0.1 at 2022-03-26 23:04:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-26 23:04:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 399)
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendered shared/_application_nav.html.erb (Duration: 198.8ms | Allocations: 14588)
+  Rendered shared/_application_footer.html.erb (Duration: 9.4ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 632.8ms | Allocations: 60209)
+Completed 200 OK in 718ms (Views: 603.7ms | ActiveRecord: 40.2ms | Allocations: 71633)
+
+
+Started POST "/logout" for 127.0.0.1 at 2022-03-26 23:05:08 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started GET "/blogs" for 127.0.0.1 at 2022-03-26 23:37:42 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (5.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 23.8ms | Allocations: 3422)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 98.5ms | Allocations: 10947)
+  Rendered shared/_blog_nav.html.erb (Duration: 5.6ms | Allocations: 758)
+  Rendered shared/_blog_masthead.html.erb (Duration: 2.3ms | Allocations: 281)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.9ms | Allocations: 925)
+  Rendered shared/_blog_footer.html.erb (Duration: 1.2ms | Allocations: 193)
+  Rendered layout layouts/blog.html.erb (Duration: 139.3ms | Allocations: 17095)
+Completed 200 OK in 316ms (Views: 119.5ms | ActiveRecord: 62.5ms | Allocations: 29167)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2022-03-26 23:37:49 +0100
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 17.1ms | Allocations: 2412)
+  Rendered blogs/new.html.erb within layouts/blog (Duration: 53.8ms | Allocations: 2825)
+  Rendered shared/_blog_nav.html.erb (Duration: 1.1ms | Allocations: 188)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.4ms | Allocations: 44)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 1.1ms | Allocations: 227)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/blog.html.erb (Duration: 62.8ms | Allocations: 4076)
+Completed 200 OK in 81ms (Views: 67.6ms | ActiveRecord: 1.2ms | Allocations: 5765)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2022-03-26 23:40:38 +0100
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (Duration: 24.7ms | Allocations: 1788)
+  Rendered blogs/index.html.erb within layouts/blog (Duration: 36.6ms | Allocations: 3033)
+  Rendered shared/_blog_nav.html.erb (Duration: 2.3ms | Allocations: 437)
+  Rendered shared/_blog_masthead.html.erb (Duration: 2.4ms | Allocations: 239)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 4.3ms | Allocations: 900)
+  Rendered shared/_blog_footer.html.erb (Duration: 2.2ms | Allocations: 191)
+  Rendered layout layouts/blog.html.erb (Duration: 60.4ms | Allocations: 6425)
+Completed 200 OK in 90ms (Views: 67.8ms | ActiveRecord: 3.9ms | Allocations: 8884)
+
+
+Started GET "/blogs/my-blog-title-2" for 127.0.0.1 at 2022-03-26 23:40:45 +0100
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-title-2"}
+  [1m[36mBlog Load (49.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:80:in `set_blog'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (Duration: 18.2ms | Allocations: 780)
+  Rendered shared/_blog_nav.html.erb (Duration: 1.8ms | Allocations: 179)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.4ms | Allocations: 44)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 1.0ms | Allocations: 219)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/blog.html.erb (Duration: 27.8ms | Allocations: 1974)
+Completed 200 OK in 105ms (Views: 29.9ms | ActiveRecord: 50.8ms | Allocations: 4492)
+
+
+Started GET "/blogs/my-blog-title-2/edit" for 127.0.0.1 at 2022-03-26 23:40:51 +0100
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-title-2"}
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:80:in `set_blog'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 11.5ms | Allocations: 1678)
+  Rendered blogs/edit.html.erb within layouts/blog (Duration: 61.9ms | Allocations: 2130)
+  Rendered shared/_blog_nav.html.erb (Duration: 1.0ms | Allocations: 183)
+  Rendered shared/_blog_masthead.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 1.0ms | Allocations: 219)
+  Rendered shared/_blog_footer.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/blog.html.erb (Duration: 72.5ms | Allocations: 3323)
+Completed 200 OK in 101ms (Views: 74.3ms | ActiveRecord: 3.0ms | Allocations: 5441)
+
+
+Started GET "/blogs/my-blog-title-2/edit" for 127.0.0.1 at 2022-03-26 23:43:58 +0100
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-title-2"}
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:80:in `set_blog'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 9.1ms | Allocations: 2231)
+  Rendered blogs/edit.html.erb within layouts/blog (Duration: 14.8ms | Allocations: 2686)
+  Rendered layout layouts/blog.html.erb (Duration: 16.4ms | Allocations: 2780)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 4.1ms | Allocations: 5685)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 0..2)):
+    10:   </div>
+    11: 
+    12:     <div class="form-group mb-3">
+    13:     <%= submit_tag 'Save', 'Blog Content', class: 'btn btn-primary' %>
+    14:   </div>
+    15: <% end %>
+    16: 
+  
+app/views/blogs/_form.html.erb:13
+app/views/blogs/_form.html.erb:1
+app/views/blogs/edit.html.erb:4
+Started GET "/blogs/my-blog-title-2/edit" for 127.0.0.1 at 2022-03-26 23:44:21 +0100
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-title-2"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:80:in `set_blog'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 23.9ms | Allocations: 1862)
+  Rendered blogs/edit.html.erb within layouts/blog (Duration: 27.8ms | Allocations: 2370)
+  Rendered shared/_blog_nav.html.erb (Duration: 2.7ms | Allocations: 436)
+  Rendered shared/_blog_masthead.html.erb (Duration: 8.3ms | Allocations: 241)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.5ms | Allocations: 889)
+  Rendered shared/_blog_footer.html.erb (Duration: 1.8ms | Allocations: 191)
+  Rendered layout layouts/blog.html.erb (Duration: 74.8ms | Allocations: 5739)
+Completed 200 OK in 129ms (Views: 87.8ms | ActiveRecord: 2.6ms | Allocations: 8867)
+
+
+Started GET "/blogs/my-blog-title-2/edit" for 127.0.0.1 at 2022-03-26 23:45:04 +0100
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-title-2"}
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-title-2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:80:in `set_blog'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+  Rendering layout layouts/blog.html.erb
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (Duration: 29.7ms | Allocations: 726)
+  Rendered blogs/edit.html.erb within layouts/blog (Duration: 35.7ms | Allocations: 1242)
+  Rendered shared/_blog_nav.html.erb (Duration: 5.8ms | Allocations: 436)
+  Rendered shared/_blog_masthead.html.erb (Duration: 3.0ms | Allocations: 241)
+  Rendered shared/_blog_asidebar.html.erb (Duration: 7.6ms | Allocations: 891)
+  Rendered shared/_blog_footer.html.erb (Duration: 1.5ms | Allocations: 191)
+  Rendered layout layouts/blog.html.erb (Duration: 72.6ms | Allocations: 4605)
+Completed 200 OK in 111ms (Views: 80.9ms | ActiveRecord: 2.4ms | Allocations: 7707)
+
+
