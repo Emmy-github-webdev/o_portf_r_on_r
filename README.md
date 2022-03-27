@@ -152,6 +152,9 @@ Add Bootstrap dependencies and Bootstrap to your application.js
 - Add require jquery-ui to application.js
 - Add @import "jquery-ui-rails" to application.css
 
+## [Cocoon Gem](https://rubygems.org/gems/cocoon/versions/1.2.9)
+- 
+
 > Rubocop Error
 - Metrics/CyclomaticComplexity: Cyclomatic complexity for cli_arg_version is too high. [9/7]
   def cli_arg_version ..
